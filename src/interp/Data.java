@@ -41,19 +41,22 @@ import parser.*;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER;}
+    public enum Type {VOID, BOOLEAN, INTEGER, DOUBLE;}
 
     /** Type of data*/
     private Type type;
 
     /** Value of the data */
-    private int value; 
+    private double value; 
 
     /** Constructor for integers */
-    Data(int v) { type = Type.INTEGER; value = v; }
+    Data(int v) { type = Type.INTEGER; value = (double) v; }
 
     /** Constructor for Booleans */
     Data(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
+
+    /** Constructor for doubles */
+    Data(double v) { type = Type.DOUBLE; value = v; }
 
     /** Constructor for void data */
     Data() {type = Type.VOID; }
@@ -70,6 +73,9 @@ public class Data {
     /** Indicates whether the data is integer */
     public boolean isInteger() { return type == Type.INTEGER; }
 
+    /** Indicates whether the data is double */
+    public boolean isDouble() { return type == Type.DOUBLE; }
+
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
 
@@ -79,6 +85,15 @@ public class Data {
      */
     public int getIntegerValue() {
         assert type == Type.INTEGER;
+        return (int) value;
+    }
+
+    /**
+     * Gets the value of a double data. The method asserts that
+     * the data is an double.
+     */
+    public double getDoubleValue() {
+        assert type == Type.DOUBLE;
         return value;
     }
 
@@ -103,7 +118,7 @@ public class Data {
     /** Returns a string representing the data in textual form. */
     public String toString() {
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
-        return Integer.toString(value);
+        return Integer.toString((int)value);
     }
     
     /**
@@ -122,7 +137,8 @@ public class Data {
      */
      
     public void evaluateArithmetic (int op, Data d) {
-        assert type == Type.INTEGER && d.type == Type.INTEGER;
+        assert (type == Type.INTEGER && d.type == Type.INTEGER) ||
+            (type == Type.DOUBLE && d.type == Type.DOUBLE);
         switch (op) {
             case AslLexer.PLUS: value += d.value; break;
             case AslLexer.MINUS: value -= d.value; break;

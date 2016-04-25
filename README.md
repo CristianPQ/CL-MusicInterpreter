@@ -7,11 +7,11 @@ Cristian Miguel Pinto Quinto
 - DATA
 	- Note : integer
 	- Duration : double : seconds
-	- Beat : integer
+		EXTRA: - Beat : integer
 
 - FUNCTION
 	- play: initialNote + Duration
 
 - OTHERS
-	- if else
-	- for
+	DONE - if else
+	EXTRA: - for

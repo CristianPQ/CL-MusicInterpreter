@@ -40,7 +40,7 @@ import org.antlr.runtime.Token;
  
 public class AslTree extends CommonTree {
     /** Field to store integer literals */
-    private int intValue;
+    private double value;
 
     /** Field to store string literals (without the enclosing quotes) */
     private String strValue;
@@ -56,17 +56,23 @@ public class AslTree extends CommonTree {
     }
 
     /** Get the integer value of the node. */
-    public int getIntValue() { return intValue;}
+    public int getIntValue() { return (int) value;}
 
     /** Define the integer value of the node. */
-    public void setIntValue() { intValue = Integer.parseInt(getText()); }
+    public void setIntValue() { value = (double) Integer.parseInt(getText()); }
+
+    /** Get the integer value of the node. */
+    public double getDoubleValue() { return value;}
+
+    /** Define the integer value of the node. */
+    public void setDoubleValue() { value = Double.parseDouble(getText()); }
 
     /** Get the Boolean value of the node. */
-    public boolean getBooleanValue() { return intValue != 0; }
+    public boolean getBooleanValue() { return value != 0; }
 
     /** Define the Boolean value of the node. */
     public void setBooleanValue() {
-        intValue = getText().equals("true") ? 1 : 0;
+        value = getText().equals("true") ? 1 : 0;
     }
 
     /** Get the string value of the node. */

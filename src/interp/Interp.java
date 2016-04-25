@@ -128,6 +128,7 @@ public class Interp {
         if (T == null) return;
         switch(T.getType()) {
             case AslLexer.INT: T.setIntValue(); break;
+            case AslLexer.DOUBLE: T.setDoubleValue(); break;
             case AslLexer.STRING: T.setStringValue(); break;
             case AslLexer.BOOLEAN: T.setBooleanValue(); break;
             default: break;
@@ -330,6 +331,10 @@ public class Interp {
             // An integer literal
             case AslLexer.INT:
                 value = new Data(t.getIntValue());
+                break;
+            // An double literal
+            case AslLexer.DOUBLE:
+                value = new Data(t.getDoubleValue());
                 break;
             // A Boolean literal
             case AslLexer.BOOLEAN:

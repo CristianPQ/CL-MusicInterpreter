@@ -144,6 +144,7 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // in parenthesis
 atom    :   ID 
         |   INT
+	|   DOUBLE
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
         |   '('! expr ')'!
@@ -188,6 +189,7 @@ TRUE    : 'true' ;
 FALSE   : 'false';
 ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 INT 	:	'0'..'9'+ ;
+DOUBLE	:	'0'..'9'+ '.' '0'..'9'+;
 
 // C-style comments
 COMMENT	: '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
