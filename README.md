@@ -8,11 +8,34 @@ Cristian Miguel Pinto Quinto
 	- Note : integer
 		- Autodefinir notas (se define negra, autodefinir corchera, semicorchera, etc)
 		- Distinguir entre do, do1, do2, do3, etc
+		EXTRA: - default
+		EXAMPLE:
+			n = 1 , y luego se le pasa al play
+				Buscar equivalencias:
+					0 --> do
+					1 --> re
+					...
 	- Duration : double : seconds
 		- De defina una duracion, y se autodefine el resto
-	- Compas : ?? :: Conjuntos de notas, un 3-4 es que tiene durada de 3 negras, 
+		EXTRA: - default
+		EXAMPLE: 
+			d = 1 --> un segundo
+
+	EXTRA: - Compas :   :: Conjuntos de notas, un 3-4 es que tiene durada de 3 negras, 
 		- Definir
 		- Comprobar que los compases tengan la duración correcta
+		- marca de inicio y fin
+		- var = compas(numerador, denominador, numNotas)
+		EXAMPLE:
+			n = 1 --> do = 1 (uno por encima)
+			d = 1 --> redonda = 1 seg
+
+			c = Compas(2, 4, 6)
+				note(do, negra)
+				note(re, blanca)
+				...
+			endCompas
+
 
 - FUNCTION
 	- play: initialNote + Duration --> hacer sonido, buscar libreria
@@ -24,7 +47,9 @@ Cristian Miguel Pinto Quinto
 
 # REPARTICIÓN #
 - ALBERT:
-	- Compas
+	- Duration
 
 - CRISTIAN:
-	- Note + Duration
+	- Note
+
+
