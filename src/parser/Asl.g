@@ -37,6 +37,7 @@ options {
 tokens {
     LIST_FUNCTIONS; // List of functions (the root of the tree)
     ASSIGN;     // Assignment instruction
+    ASSIGNNOTE;     // Assignment instruction
     PARAMS;     // List of parameters in the declaration of a function
     FUNCALL;    // Function call
     ARGLIST;    // List of arguments passed in a function call
@@ -86,7 +87,8 @@ block_instructions
 
 // The different types of instructions
 instruction
-        :	assign          // Assignment
+        :	assignnote          // Assignment
+        | assign
         |	ite_stmt        // if-then-else
         |	while_stmt      // while statement
         |   funcall         // Call to a procedure (no result produced)
@@ -98,6 +100,9 @@ instruction
 
 // Assignment
 assign	:	ID eq=EQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
+        ;
+
+assignnote  :   note eq=EQUAL expr -> ^(ASSIGNNOTE[$eq,":="] note expr)
         ;
 
 // if-then-else (else is optional)
@@ -142,7 +147,7 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // Atom of the expressions (variables, integer and boolean literals).
 // An atom can also be a function call or another expression
 // in parenthesis
-atom    :   ID 
+atom    :  ID 
         |   INT
 	|   DOUBLE
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
@@ -157,6 +162,7 @@ funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
 // A list of expressions separated by commas
 expr_list:  expr (','! expr)*
         ;
+note : NOTE^ INT?;
 
 // Basic tokens
 EQUAL	: '=' ;
@@ -187,6 +193,7 @@ READ	: 'read' ;
 WRITE	: 'write' ;
 TRUE    : 'true' ;
 FALSE   : 'false';
+NOTE    : 'n' ('do'|'re'|'mi'|'fa'|'sol'|'la'|'si');
 ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 INT 	:	'0'..'9'+ ;
 DOUBLE	:	'0'..'9'+ '.' '0'..'9'+;

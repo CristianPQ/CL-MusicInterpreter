@@ -236,6 +236,10 @@ public class Interp {
         // A big switch for all type of instructions
         switch (t.getType()) {
 
+            case AslLexer.ASSIGNNOTE:
+                //
+                return null;
+
             // Assignment
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-04-25 09:02:55
+// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-09 09:50:57
 
 package parser;
 
@@ -11,55 +11,57 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AslLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__48=48;
-    public static final int T__49=49;
     public static final int T__50=50;
     public static final int T__51=51;
     public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
-    public static final int BOOLEAN=7;
-    public static final int COMMENT=8;
-    public static final int DIV=9;
-    public static final int DO=10;
-    public static final int DOUBLE=11;
-    public static final int ELSE=12;
-    public static final int ENDFUNC=13;
-    public static final int ENDIF=14;
-    public static final int ENDWHILE=15;
-    public static final int EQUAL=16;
-    public static final int ESC_SEQ=17;
-    public static final int FALSE=18;
-    public static final int FUNC=19;
-    public static final int FUNCALL=20;
-    public static final int GE=21;
-    public static final int GT=22;
-    public static final int ID=23;
-    public static final int IF=24;
-    public static final int INT=25;
-    public static final int LE=26;
-    public static final int LIST_FUNCTIONS=27;
-    public static final int LIST_INSTR=28;
-    public static final int LT=29;
-    public static final int MINUS=30;
-    public static final int MOD=31;
-    public static final int MUL=32;
-    public static final int NOT=33;
-    public static final int NOT_EQUAL=34;
-    public static final int OR=35;
-    public static final int PARAMS=36;
-    public static final int PLUS=37;
-    public static final int PREF=38;
-    public static final int PVALUE=39;
-    public static final int READ=40;
-    public static final int RETURN=41;
-    public static final int STRING=42;
-    public static final int THEN=43;
-    public static final int TRUE=44;
-    public static final int WHILE=45;
-    public static final int WRITE=46;
-    public static final int WS=47;
+    public static final int ASSIGNNOTE=7;
+    public static final int BOOLEAN=8;
+    public static final int COMMENT=9;
+    public static final int DIV=10;
+    public static final int DO=11;
+    public static final int DOUBLE=12;
+    public static final int ELSE=13;
+    public static final int ENDFUNC=14;
+    public static final int ENDIF=15;
+    public static final int ENDWHILE=16;
+    public static final int EQUAL=17;
+    public static final int ESC_SEQ=18;
+    public static final int FALSE=19;
+    public static final int FUNC=20;
+    public static final int FUNCALL=21;
+    public static final int GE=22;
+    public static final int GT=23;
+    public static final int ID=24;
+    public static final int IF=25;
+    public static final int INT=26;
+    public static final int LE=27;
+    public static final int LIST_FUNCTIONS=28;
+    public static final int LIST_INSTR=29;
+    public static final int LT=30;
+    public static final int MINUS=31;
+    public static final int MOD=32;
+    public static final int MUL=33;
+    public static final int NOT=34;
+    public static final int NOTE=35;
+    public static final int NOT_EQUAL=36;
+    public static final int OR=37;
+    public static final int PARAMS=38;
+    public static final int PLUS=39;
+    public static final int PREF=40;
+    public static final int PVALUE=41;
+    public static final int READ=42;
+    public static final int RETURN=43;
+    public static final int STRING=44;
+    public static final int THEN=45;
+    public static final int TRUE=46;
+    public static final int WHILE=47;
+    public static final int WRITE=48;
+    public static final int WS=49;
 
     // delegates
     // delegators
@@ -76,57 +78,15 @@ public class AslLexer extends Lexer {
     }
     public String getGrammarFileName() { return "/Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g"; }
 
-    // $ANTLR start "T__48"
-    public final void mT__48() throws RecognitionException {
-        try {
-            int _type = T__48;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:6:7: ( '&' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:6:9: '&'
-            {
-            match('&'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__48"
-
-    // $ANTLR start "T__49"
-    public final void mT__49() throws RecognitionException {
-        try {
-            int _type = T__49;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:7:7: ( '(' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:7:9: '('
-            {
-            match('('); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__49"
-
     // $ANTLR start "T__50"
     public final void mT__50() throws RecognitionException {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:8:7: ( ')' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:8:9: ')'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:6:7: ( '&' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:6:9: '&'
             {
-            match(')'); 
+            match('&'); 
 
             }
 
@@ -144,10 +104,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:9:7: ( ',' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:9:9: ','
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:7:7: ( '(' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:7:9: '('
             {
-            match(','); 
+            match('('); 
 
             }
 
@@ -165,6 +125,48 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:8:7: ( ')' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:8:9: ')'
+            {
+            match(')'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__52"
+
+    // $ANTLR start "T__53"
+    public final void mT__53() throws RecognitionException {
+        try {
+            int _type = T__53;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:9:7: ( ',' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:9:9: ','
+            {
+            match(','); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__53"
+
+    // $ANTLR start "T__54"
+    public final void mT__54() throws RecognitionException {
+        try {
+            int _type = T__54;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
             // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:10:7: ( ';' )
             // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:10:9: ';'
             {
@@ -179,15 +181,15 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__52"
+    // $ANTLR end "T__54"
 
     // $ANTLR start "EQUAL"
     public final void mEQUAL() throws RecognitionException {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:162:7: ( '=' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:162:9: '='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:168:7: ( '=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:168:9: '='
             {
             match('='); 
 
@@ -207,8 +209,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:10: ( '!=' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:12: '!='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:169:10: ( '!=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:169:12: '!='
             {
             match("!="); 
 
@@ -230,8 +232,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:8: ( '<' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:10: '<'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:170:8: ( '<' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:170:10: '<'
             {
             match('<'); 
 
@@ -251,8 +253,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:8: ( '<=' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:10: '<='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:171:8: ( '<=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:171:10: '<='
             {
             match("<="); 
 
@@ -274,8 +276,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:8: ( '>' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:10: '>'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:172:8: ( '>' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:172:10: '>'
             {
             match('>'); 
 
@@ -295,8 +297,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:8: ( '>=' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:10: '>='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:8: ( '>=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:10: '>='
             {
             match(">="); 
 
@@ -318,8 +320,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:168:6: ( '+' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:168:8: '+'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:174:6: ( '+' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:174:8: '+'
             {
             match('+'); 
 
@@ -339,8 +341,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:169:7: ( '-' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:169:9: '-'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:175:7: ( '-' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:175:9: '-'
             {
             match('-'); 
 
@@ -360,8 +362,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:170:9: ( '*' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:170:11: '*'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:176:9: ( '*' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:176:11: '*'
             {
             match('*'); 
 
@@ -381,8 +383,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:171:9: ( '/' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:171:11: '/'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:9: ( '/' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:11: '/'
             {
             match('/'); 
 
@@ -402,8 +404,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:172:9: ( '%' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:172:11: '%'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:178:9: ( '%' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:178:11: '%'
             {
             match('%'); 
 
@@ -423,8 +425,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:9: ( 'not' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:11: 'not'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:9: ( 'not' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:11: 'not'
             {
             match("not"); 
 
@@ -446,8 +448,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:174:9: ( 'and' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:174:11: 'and'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:180:9: ( 'and' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:180:11: 'and'
             {
             match("and"); 
 
@@ -469,8 +471,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:175:8: ( 'or' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:175:10: 'or'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:8: ( 'or' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:10: 'or'
             {
             match("or"); 
 
@@ -492,8 +494,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:176:6: ( 'if' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:176:8: 'if'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:182:6: ( 'if' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:182:8: 'if'
             {
             match("if"); 
 
@@ -515,8 +517,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:6: ( 'then' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:8: 'then'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:183:6: ( 'then' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:183:8: 'then'
             {
             match("then"); 
 
@@ -538,8 +540,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:178:6: ( 'else' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:178:8: 'else'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:184:6: ( 'else' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:184:8: 'else'
             {
             match("else"); 
 
@@ -561,8 +563,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:7: ( 'endif' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:9: 'endif'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:185:7: ( 'endif' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:185:9: 'endif'
             {
             match("endif"); 
 
@@ -584,8 +586,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:180:7: ( 'while' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:180:9: 'while'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:186:7: ( 'while' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:186:9: 'while'
             {
             match("while"); 
 
@@ -607,8 +609,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:8: ( 'do' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:10: 'do'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:187:8: ( 'do' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:187:10: 'do'
             {
             match("do"); 
 
@@ -630,8 +632,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:182:9: ( 'endwhile' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:182:11: 'endwhile'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:188:9: ( 'endwhile' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:188:11: 'endwhile'
             {
             match("endwhile"); 
 
@@ -653,8 +655,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:183:6: ( 'func' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:183:8: 'func'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:189:6: ( 'func' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:189:8: 'func'
             {
             match("func"); 
 
@@ -676,8 +678,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:184:9: ( 'endfunc' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:184:11: 'endfunc'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:9: ( 'endfunc' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -699,8 +701,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:185:8: ( 'return' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:185:10: 'return'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:8: ( 'return' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:10: 'return'
             {
             match("return"); 
 
@@ -722,8 +724,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:186:6: ( 'read' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:186:8: 'read'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:6: ( 'read' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:8: 'read'
             {
             match("read"); 
 
@@ -745,8 +747,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:187:7: ( 'write' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:187:9: 'write'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:193:7: ( 'write' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:193:9: 'write'
             {
             match("write"); 
 
@@ -768,8 +770,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:188:9: ( 'true' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:188:11: 'true'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:194:9: ( 'true' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:194:11: 'true'
             {
             match("true"); 
 
@@ -791,8 +793,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:189:9: ( 'false' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:189:11: 'false'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:9: ( 'false' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:11: 'false'
             {
             match("false"); 
 
@@ -809,13 +811,157 @@ public class AslLexer extends Lexer {
     }
     // $ANTLR end "FALSE"
 
+    // $ANTLR start "NOTE"
+    public final void mNOTE() throws RecognitionException {
+        try {
+            int _type = NOTE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:9: ( 'n' ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:11: 'n' ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' )
+            {
+            match('n'); 
+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:15: ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' )
+            int alt1=7;
+            switch ( input.LA(1) ) {
+            case 'd':
+                {
+                alt1=1;
+                }
+                break;
+            case 'r':
+                {
+                alt1=2;
+                }
+                break;
+            case 'm':
+                {
+                alt1=3;
+                }
+                break;
+            case 'f':
+                {
+                alt1=4;
+                }
+                break;
+            case 's':
+                {
+                int LA1_5 = input.LA(2);
+
+                if ( (LA1_5=='o') ) {
+                    alt1=5;
+                }
+                else if ( (LA1_5=='i') ) {
+                    alt1=7;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 1, 5, input);
+
+                    throw nvae;
+
+                }
+                }
+                break;
+            case 'l':
+                {
+                alt1=6;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+
+            }
+
+            switch (alt1) {
+                case 1 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:16: 'do'
+                    {
+                    match("do"); 
+
+
+
+                    }
+                    break;
+                case 2 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:21: 're'
+                    {
+                    match("re"); 
+
+
+
+                    }
+                    break;
+                case 3 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:26: 'mi'
+                    {
+                    match("mi"); 
+
+
+
+                    }
+                    break;
+                case 4 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:31: 'fa'
+                    {
+                    match("fa"); 
+
+
+
+                    }
+                    break;
+                case 5 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:36: 'sol'
+                    {
+                    match("sol"); 
+
+
+
+                    }
+                    break;
+                case 6 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:42: 'la'
+                    {
+                    match("la"); 
+
+
+
+                    }
+                    break;
+                case 7 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:47: 'si'
+                    {
+                    match("si"); 
+
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "NOTE"
+
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:197:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:197:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -827,18 +973,18 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-            loop1:
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:197:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            loop2:
             do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-                if ( ((LA1_0 >= '0' && LA1_0 <= '9')||(LA1_0 >= 'A' && LA1_0 <= 'Z')||LA1_0=='_'||(LA1_0 >= 'a' && LA1_0 <= 'z')) ) {
-                    alt1=1;
+                if ( ((LA2_0 >= '0' && LA2_0 <= '9')||(LA2_0 >= 'A' && LA2_0 <= 'Z')||LA2_0=='_'||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
+                    alt2=1;
                 }
 
 
-                switch (alt1) {
+                switch (alt2) {
             	case 1 :
             	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
             	    {
@@ -856,7 +1002,7 @@ public class AslLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop1;
+            	    break loop2;
                 }
             } while (true);
 
@@ -877,68 +1023,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:6: ( ( '0' .. '9' )+ )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:8: ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:198:6: ( ( '0' .. '9' )+ )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:198:8: ( '0' .. '9' )+
             {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:8: ( '0' .. '9' )+
-            int cnt2=0;
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
-
-                if ( ((LA2_0 >= '0' && LA2_0 <= '9')) ) {
-                    alt2=1;
-                }
-
-
-                switch (alt2) {
-            	case 1 :
-            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
-            	    {
-            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
-            	        input.consume();
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt2 >= 1 ) break loop2;
-                        EarlyExitException eee =
-                            new EarlyExitException(2, input);
-                        throw eee;
-                }
-                cnt2++;
-            } while (true);
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "INT"
-
-    // $ANTLR start "DOUBLE"
-    public final void mDOUBLE() throws RecognitionException {
-        try {
-            int _type = DOUBLE;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:8: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:10: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
-            {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:10: ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:198:8: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -977,9 +1065,26 @@ public class AslLexer extends Lexer {
             } while (true);
 
 
-            match('.'); 
+            }
 
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:24: ( '0' .. '9' )+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "INT"
+
+    // $ANTLR start "DOUBLE"
+    public final void mDOUBLE() throws RecognitionException {
+        try {
+            int _type = DOUBLE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:199:8: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:199:10: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+            {
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:199:10: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -1018,6 +1123,47 @@ public class AslLexer extends Lexer {
             } while (true);
 
 
+            match('.'); 
+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:199:24: ( '0' .. '9' )+
+            int cnt5=0;
+            loop5:
+            do {
+                int alt5=2;
+                int LA5_0 = input.LA(1);
+
+                if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
+                    alt5=1;
+                }
+
+
+                switch (alt5) {
+            	case 1 :
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
+            	    {
+            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+            	        input.consume();
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt5 >= 1 ) break loop5;
+                        EarlyExitException eee =
+                            new EarlyExitException(5, input);
+                        throw eee;
+                }
+                cnt5++;
+            } while (true);
+
+
             }
 
             state.type = _type;
@@ -1034,22 +1180,22 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA8_0=='/') ) {
-                int LA8_1 = input.LA(2);
+            if ( (LA9_0=='/') ) {
+                int LA9_1 = input.LA(2);
 
-                if ( (LA8_1=='/') ) {
-                    alt8=1;
+                if ( (LA9_1=='/') ) {
+                    alt9=1;
                 }
-                else if ( (LA8_1=='*') ) {
-                    alt8=2;
+                else if ( (LA9_1=='*') ) {
+                    alt9=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 8, 1, input);
+                        new NoViableAltException("", 9, 1, input);
 
                     throw nvae;
 
@@ -1057,31 +1203,31 @@ public class AslLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:16: (~ ( '\\n' | '\\r' ) )*
-                    loop5:
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:16: (~ ( '\\n' | '\\r' ) )*
+                    loop6:
                     do {
-                        int alt5=2;
-                        int LA5_0 = input.LA(1);
+                        int alt6=2;
+                        int LA6_0 = input.LA(1);
 
-                        if ( ((LA5_0 >= '\u0000' && LA5_0 <= '\t')||(LA5_0 >= '\u000B' && LA5_0 <= '\f')||(LA5_0 >= '\u000E' && LA5_0 <= '\uFFFF')) ) {
-                            alt5=1;
+                        if ( ((LA6_0 >= '\u0000' && LA6_0 <= '\t')||(LA6_0 >= '\u000B' && LA6_0 <= '\f')||(LA6_0 >= '\u000E' && LA6_0 <= '\uFFFF')) ) {
+                            alt6=1;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt6) {
                     	case 1 :
                     	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
                     	    {
@@ -1099,21 +1245,21 @@ public class AslLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop6;
                         }
                     } while (true);
 
 
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:30: ( '\\r' )?
-                    int alt6=2;
-                    int LA6_0 = input.LA(1);
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:30: ( '\\r' )?
+                    int alt7=2;
+                    int LA7_0 = input.LA(1);
 
-                    if ( (LA6_0=='\r') ) {
-                        alt6=1;
+                    if ( (LA7_0=='\r') ) {
+                        alt7=1;
                     }
-                    switch (alt6) {
+                    switch (alt7) {
                         case 1 :
-                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:30: '\\r'
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:30: '\\r'
                             {
                             match('\r'); 
 
@@ -1130,38 +1276,38 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:8: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:203:8: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:13: ( options {greedy=false; } : . )*
-                    loop7:
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:203:13: ( options {greedy=false; } : . )*
+                    loop8:
                     do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
+                        int alt8=2;
+                        int LA8_0 = input.LA(1);
 
-                        if ( (LA7_0=='*') ) {
-                            int LA7_1 = input.LA(2);
+                        if ( (LA8_0=='*') ) {
+                            int LA8_1 = input.LA(2);
 
-                            if ( (LA7_1=='/') ) {
-                                alt7=2;
+                            if ( (LA8_1=='/') ) {
+                                alt8=2;
                             }
-                            else if ( ((LA7_1 >= '\u0000' && LA7_1 <= '.')||(LA7_1 >= '0' && LA7_1 <= '\uFFFF')) ) {
-                                alt7=1;
+                            else if ( ((LA8_1 >= '\u0000' && LA8_1 <= '.')||(LA8_1 >= '0' && LA8_1 <= '\uFFFF')) ) {
+                                alt8=1;
                             }
 
 
                         }
-                        else if ( ((LA7_0 >= '\u0000' && LA7_0 <= ')')||(LA7_0 >= '+' && LA7_0 <= '\uFFFF')) ) {
-                            alt7=1;
+                        else if ( ((LA8_0 >= '\u0000' && LA8_0 <= ')')||(LA8_0 >= '+' && LA8_0 <= '\uFFFF')) ) {
+                            alt8=1;
                         }
 
 
-                        switch (alt7) {
+                        switch (alt8) {
                     	case 1 :
-                    	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:41: .
+                    	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:203:41: .
                     	    {
                     	    matchAny(); 
 
@@ -1169,7 +1315,7 @@ public class AslLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop7;
+                    	    break loop8;
                         }
                     } while (true);
 
@@ -1198,28 +1344,28 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
-            loop9:
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            loop10:
             do {
-                int alt9=3;
-                int LA9_0 = input.LA(1);
+                int alt10=3;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA9_0=='\\') ) {
-                    alt9=1;
+                if ( (LA10_0=='\\') ) {
+                    alt10=1;
                 }
-                else if ( ((LA9_0 >= '\u0000' && LA9_0 <= '!')||(LA9_0 >= '#' && LA9_0 <= '[')||(LA9_0 >= ']' && LA9_0 <= '\uFFFF')) ) {
-                    alt9=2;
+                else if ( ((LA10_0 >= '\u0000' && LA10_0 <= '!')||(LA10_0 >= '#' && LA10_0 <= '[')||(LA10_0 >= ']' && LA10_0 <= '\uFFFF')) ) {
+                    alt10=2;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
-            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:18: ESC_SEQ
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -1227,7 +1373,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:28: ~ ( '\\\\' | '\"' )
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -1243,7 +1389,7 @@ public class AslLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
@@ -1264,8 +1410,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:206:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:206:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:213:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:213:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -1294,8 +1440,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:209:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:209:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:216:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:216:8: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1321,46 +1467,46 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:8: ( T__48 | T__49 | T__50 | T__51 | T__52 | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | DOUBLE | COMMENT | STRING | WS )
-        int alt10=39;
-        alt10 = dfa10.predict(input);
-        switch (alt10) {
+        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:8: ( T__50 | T__51 | T__52 | T__53 | T__54 | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | ID | INT | DOUBLE | COMMENT | STRING | WS )
+        int alt11=40;
+        alt11 = dfa11.predict(input);
+        switch (alt11) {
             case 1 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:10: T__48
-                {
-                mT__48(); 
-
-
-                }
-                break;
-            case 2 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:16: T__49
-                {
-                mT__49(); 
-
-
-                }
-                break;
-            case 3 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:22: T__50
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:10: T__50
                 {
                 mT__50(); 
 
 
                 }
                 break;
-            case 4 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:28: T__51
+            case 2 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:16: T__51
                 {
                 mT__51(); 
 
 
                 }
                 break;
-            case 5 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:34: T__52
+            case 3 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:22: T__52
                 {
                 mT__52(); 
+
+
+                }
+                break;
+            case 4 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:28: T__53
+                {
+                mT__53(); 
+
+
+                }
+                break;
+            case 5 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:34: T__54
+                {
+                mT__54(); 
 
 
                 }
@@ -1590,47 +1736,55 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:181: ID
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:181: NOTE
+                {
+                mNOTE(); 
+
+
+                }
+                break;
+            case 35 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:186: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 35 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:184: INT
+            case 36 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:189: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 36 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:188: DOUBLE
+            case 37 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:193: DOUBLE
                 {
                 mDOUBLE(); 
 
 
                 }
                 break;
-            case 37 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:195: COMMENT
+            case 38 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:200: COMMENT
                 {
                 mCOMMENT(); 
 
 
                 }
                 break;
-            case 38 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:203: STRING
+            case 39 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:208: STRING
                 {
                 mSTRING(); 
 
 
                 }
                 break;
-            case 39 :
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:210: WS
+            case 40 :
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:215: WS
                 {
                 mWS(); 
 
@@ -1643,41 +1797,44 @@ public class AslLexer extends Lexer {
     }
 
 
-    protected DFA10 dfa10 = new DFA10(this);
-    static final String DFA10_eotS =
-        "\10\uffff\1\36\1\40\3\uffff\1\42\1\uffff\12\31\1\uffff\1\61\10\uffff"+
-        "\2\31\1\65\1\66\6\31\1\75\3\31\2\uffff\1\102\1\103\2\uffff\6\31"+
-        "\1\uffff\4\31\2\uffff\1\120\1\121\1\122\5\31\1\130\2\31\1\133\3"+
-        "\uffff\1\134\2\31\1\137\1\140\1\uffff\1\141\1\31\2\uffff\2\31\3"+
-        "\uffff\1\145\1\31\1\147\1\uffff\1\150\2\uffff";
-    static final String DFA10_eofS =
-        "\151\uffff";
-    static final String DFA10_minS =
-        "\1\11\7\uffff\2\75\3\uffff\1\52\1\uffff\1\157\1\156\1\162\1\146"+
+    protected DFA11 dfa11 = new DFA11(this);
+    static final String DFA11_eotS =
+        "\10\uffff\1\36\1\40\3\uffff\1\42\1\uffff\12\31\1\uffff\1\67\10\uffff"+
+        "\10\31\1\102\1\103\6\31\1\112\3\31\2\uffff\1\117\4\120\1\31\2\120"+
+        "\1\122\2\uffff\6\31\1\uffff\4\31\2\uffff\1\120\1\uffff\1\137\1\140"+
+        "\1\141\5\31\1\147\2\31\1\152\3\uffff\1\153\2\31\1\156\1\157\1\uffff"+
+        "\1\160\1\31\2\uffff\2\31\3\uffff\1\164\1\31\1\166\1\uffff\1\167"+
+        "\2\uffff";
+    static final String DFA11_eofS =
+        "\170\uffff";
+    static final String DFA11_minS =
+        "\1\11\7\uffff\2\75\3\uffff\1\52\1\uffff\1\144\1\156\1\162\1\146"+
         "\1\150\1\154\1\150\1\157\1\141\1\145\1\uffff\1\56\10\uffff\1\164"+
-        "\1\144\2\60\1\145\1\165\1\163\1\144\2\151\1\60\1\156\1\154\1\141"+
-        "\2\uffff\2\60\2\uffff\1\156\2\145\1\146\1\154\1\164\1\uffff\1\143"+
-        "\1\163\1\165\1\144\2\uffff\3\60\1\146\1\150\1\165\2\145\1\60\1\145"+
-        "\1\162\1\60\3\uffff\1\60\1\151\1\156\2\60\1\uffff\1\60\1\156\2\uffff"+
-        "\1\154\1\143\3\uffff\1\60\1\145\1\60\1\uffff\1\60\2\uffff";
-    static final String DFA10_maxS =
-        "\1\172\7\uffff\2\75\3\uffff\1\57\1\uffff\1\157\1\156\1\162\1\146"+
+        "\1\157\1\145\1\151\1\141\1\151\1\141\1\144\2\60\1\145\1\165\1\163"+
+        "\1\144\2\151\1\60\1\156\1\154\1\141\2\uffff\5\60\1\154\3\60\2\uffff"+
+        "\1\156\2\145\1\146\1\154\1\164\1\uffff\1\143\1\163\1\165\1\144\2"+
+        "\uffff\1\60\1\uffff\3\60\1\146\1\150\1\165\2\145\1\60\1\145\1\162"+
+        "\1\60\3\uffff\1\60\1\151\1\156\2\60\1\uffff\1\60\1\156\2\uffff\1"+
+        "\154\1\143\3\uffff\1\60\1\145\1\60\1\uffff\1\60\2\uffff";
+    static final String DFA11_maxS =
+        "\1\172\7\uffff\2\75\3\uffff\1\57\1\uffff\1\163\1\156\1\162\1\146"+
         "\1\162\1\156\1\162\1\157\1\165\1\145\1\uffff\1\71\10\uffff\1\164"+
-        "\1\144\2\172\1\145\1\165\1\163\1\144\2\151\1\172\1\156\1\154\1\164"+
-        "\2\uffff\2\172\2\uffff\1\156\2\145\1\167\1\154\1\164\1\uffff\1\143"+
-        "\1\163\1\165\1\144\2\uffff\3\172\1\146\1\150\1\165\2\145\1\172\1"+
+        "\1\157\1\145\1\151\1\141\1\157\1\141\1\144\2\172\1\145\1\165\1\163"+
+        "\1\144\2\151\1\172\1\156\1\154\1\164\2\uffff\5\172\1\154\3\172\2"+
+        "\uffff\1\156\2\145\1\167\1\154\1\164\1\uffff\1\143\1\163\1\165\1"+
+        "\144\2\uffff\1\172\1\uffff\3\172\1\146\1\150\1\165\2\145\1\172\1"+
         "\145\1\162\1\172\3\uffff\1\172\1\151\1\156\2\172\1\uffff\1\172\1"+
         "\156\2\uffff\1\154\1\143\3\uffff\1\172\1\145\1\172\1\uffff\1\172"+
         "\2\uffff";
-    static final String DFA10_acceptS =
+    static final String DFA11_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\2\uffff\1\14\1\15\1\16\1\uffff"+
-        "\1\20\12\uffff\1\42\1\uffff\1\46\1\47\1\11\1\10\1\13\1\12\1\45\1"+
-        "\17\16\uffff\1\43\1\44\2\uffff\1\23\1\24\6\uffff\1\31\4\uffff\1"+
-        "\21\1\22\14\uffff\1\25\1\40\1\26\5\uffff\1\33\2\uffff\1\36\1\27"+
-        "\2\uffff\1\30\1\37\1\41\3\uffff\1\35\1\uffff\1\34\1\32";
-    static final String DFA10_specialS =
-        "\151\uffff}>";
-    static final String[] DFA10_transitionS = {
+        "\1\20\12\uffff\1\43\1\uffff\1\47\1\50\1\11\1\10\1\13\1\12\1\46\1"+
+        "\17\24\uffff\1\44\1\45\11\uffff\1\23\1\24\6\uffff\1\31\4\uffff\1"+
+        "\21\1\42\1\uffff\1\22\14\uffff\1\25\1\40\1\26\5\uffff\1\33\2\uffff"+
+        "\1\36\1\27\2\uffff\1\30\1\37\1\41\3\uffff\1\35\1\uffff\1\34\1\32";
+    static final String DFA11_specialS =
+        "\170\uffff}>";
+    static final String[] DFA11_transitionS = {
             "\2\34\2\uffff\1\34\22\uffff\1\34\1\7\1\33\2\uffff\1\16\1\1\1"+
             "\uffff\1\2\1\3\1\14\1\12\1\4\1\13\1\uffff\1\15\12\32\1\uffff"+
             "\1\5\1\10\1\6\1\11\2\uffff\32\31\4\uffff\1\31\1\uffff\1\20\2"+
@@ -1697,91 +1854,107 @@ public class AslLexer extends Lexer {
             "",
             "\1\41\4\uffff\1\41",
             "",
-            "\1\43",
-            "\1\44",
-            "\1\45",
-            "\1\46",
-            "\1\47\11\uffff\1\50",
-            "\1\51\1\uffff\1\52",
-            "\1\53\11\uffff\1\54",
-            "\1\55",
-            "\1\57\23\uffff\1\56",
-            "\1\60",
-            "",
-            "\1\62\1\uffff\12\32",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\44\1\uffff\1\47\5\uffff\1\51\1\46\1\uffff\1\43\2\uffff\1"+
+            "\45\1\50",
+            "\1\52",
+            "\1\53",
+            "\1\54",
+            "\1\55\11\uffff\1\56",
+            "\1\57\1\uffff\1\60",
+            "\1\61\11\uffff\1\62",
             "\1\63",
-            "\1\64",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\67",
-            "\1\70",
+            "\1\65\23\uffff\1\64",
+            "\1\66",
+            "",
+            "\1\70\1\uffff\12\32",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\71",
             "\1\72",
             "\1\73",
             "\1\74",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\76",
-            "\1\77",
-            "\1\101\22\uffff\1\100",
-            "",
-            "",
+            "\1\75",
+            "\1\77\5\uffff\1\76",
+            "\1\100",
+            "\1\101",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "",
-            "",
             "\1\104",
             "\1\105",
             "\1\106",
-            "\1\111\2\uffff\1\107\15\uffff\1\110",
-            "\1\112",
+            "\1\107",
+            "\1\110",
+            "\1\111",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\113",
-            "",
             "\1\114",
-            "\1\115",
-            "\1\116",
-            "\1\117",
+            "\1\116\22\uffff\1\115",
             "",
             "",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\121",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "",
             "\1\123",
             "\1\124",
             "\1\125",
-            "\1\126",
-            "\1\127",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\130\2\uffff\1\126\15\uffff\1\127",
             "\1\131",
             "\1\132",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
-            "",
-            "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\133",
+            "\1\134",
             "\1\135",
             "\1\136",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\142",
-            "",
-            "",
             "\1\143",
             "\1\144",
+            "\1\145",
+            "\1\146",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\150",
+            "\1\151",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "",
             "",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\146",
+            "\1\154",
+            "\1\155",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\161",
+            "",
+            "",
+            "\1\162",
+            "\1\163",
+            "",
+            "",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\165",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
@@ -1789,37 +1962,37 @@ public class AslLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
-    static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
-    static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
-    static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
-    static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
-    static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
-    static final short[][] DFA10_transition;
+    static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
+    static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
+    static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
+    static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
+    static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
+    static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
+    static final short[][] DFA11_transition;
 
     static {
-        int numStates = DFA10_transitionS.length;
-        DFA10_transition = new short[numStates][];
+        int numStates = DFA11_transitionS.length;
+        DFA11_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
+            DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
         }
     }
 
-    class DFA10 extends DFA {
+    class DFA11 extends DFA {
 
-        public DFA10(BaseRecognizer recognizer) {
+        public DFA11(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 10;
-            this.eot = DFA10_eot;
-            this.eof = DFA10_eof;
-            this.min = DFA10_min;
-            this.max = DFA10_max;
-            this.accept = DFA10_accept;
-            this.special = DFA10_special;
-            this.transition = DFA10_transition;
+            this.decisionNumber = 11;
+            this.eot = DFA11_eot;
+            this.eof = DFA11_eof;
+            this.min = DFA11_min;
+            this.max = DFA11_max;
+            this.accept = DFA11_accept;
+            this.special = DFA11_special;
+            this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__48 | T__49 | T__50 | T__51 | T__52 | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | DOUBLE | COMMENT | STRING | WS );";
+            return "1:1: Tokens : ( T__50 | T__51 | T__52 | T__53 | T__54 | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | ID | INT | DOUBLE | COMMENT | STRING | WS );";
         }
     }
  

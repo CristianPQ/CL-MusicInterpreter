@@ -52,4 +52,4 @@ Cristian Miguel Pinto Quinto
 - CRISTIAN:
 	- Note
 
-
+- others: Compass
