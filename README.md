@@ -14,7 +14,6 @@ Cristian Miguel Pinto Quinto
 		- Definir
 		- Comprobar que los compases tengan la duración correcta
 
-
 - FUNCTION
 	- play: initialNote + Duration --> hacer sonido, buscar libreria
 
