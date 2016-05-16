@@ -147,7 +147,8 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // Atom of the expressions (variables, integer and boolean literals).
 // An atom can also be a function call or another expression
 // in parenthesis
-atom    :  ID 
+atom    :  note
+	|   ID 
         |   INT
 	|   DOUBLE
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
@@ -162,7 +163,7 @@ funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
 // A list of expressions separated by commas
 expr_list:  expr (','! expr)*
         ;
-note : NOTE^ INT?;
+note : NOTE^ (INT)?;
 
 // Basic tokens
 EQUAL	: '=' ;

@@ -6,8 +6,8 @@ Cristian Miguel Pinto Quinto
 # TODO #
 - DATA
 	- Note : integer
-		- Autodefinir notas (se define negra, autodefinir corchera, semicorchera, etc)
-		- Distinguir entre do, do1, do2, do3, etc
+		- Autodefinir notas (do re mi fa sol la si....)
+		- Distinguir entre do, do 1, do 2, do 3, etc
 		EXTRA: - default
 		EXAMPLE:
 			n = 1 , y luego se le pasa al play

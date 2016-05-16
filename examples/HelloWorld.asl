@@ -1,3 +1,3 @@
 func main()
-  write "Hello world !%n";
+  ndo = 3
 endfunc

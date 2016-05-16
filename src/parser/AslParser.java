@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-09 09:50:56
+// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-16 18:35:58
 
 package parser;
 import interp.AslTree;
@@ -1524,7 +1524,7 @@ public TreeAdaptor getTreeAdaptor() {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==DOUBLE||LA8_0==FALSE||LA8_0==ID||LA8_0==INT||LA8_0==MINUS||LA8_0==NOT||LA8_0==PLUS||LA8_0==TRUE||LA8_0==51) ) {
+            if ( (LA8_0==DOUBLE||LA8_0==FALSE||LA8_0==ID||LA8_0==INT||LA8_0==MINUS||(LA8_0 >= NOT && LA8_0 <= NOTE)||LA8_0==PLUS||LA8_0==TRUE||LA8_0==51) ) {
                 alt8=1;
             }
             switch (alt8) {
@@ -1675,7 +1675,7 @@ public TreeAdaptor getTreeAdaptor() {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==DOUBLE||LA9_0==FALSE||LA9_0==ID||LA9_0==INT||LA9_0==MINUS||LA9_0==NOT||LA9_0==PLUS||LA9_0==TRUE||LA9_0==51) ) {
+            if ( (LA9_0==DOUBLE||LA9_0==FALSE||LA9_0==ID||LA9_0==INT||LA9_0==MINUS||(LA9_0 >= NOT && LA9_0 <= NOTE)||LA9_0==PLUS||LA9_0==TRUE||LA9_0==51) ) {
                 alt9=1;
             }
             else if ( (LA9_0==STRING) ) {
@@ -2586,7 +2586,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:1: atom : ( ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:1: atom : ( note | ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
     public final AslParser.atom_return atom() throws RecognitionException {
         AslParser.atom_return retval = new AslParser.atom_return();
         retval.start = input.LT(1);
@@ -2595,42 +2595,49 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree root_0 = null;
 
         Token b=null;
-        Token ID76=null;
-        Token INT77=null;
-        Token DOUBLE78=null;
-        Token char_literal80=null;
-        Token char_literal82=null;
-        AslParser.funcall_return funcall79 =null;
+        Token ID77=null;
+        Token INT78=null;
+        Token DOUBLE79=null;
+        Token char_literal81=null;
+        Token char_literal83=null;
+        AslParser.note_return note76 =null;
 
-        AslParser.expr_return expr81 =null;
+        AslParser.funcall_return funcall80 =null;
+
+        AslParser.expr_return expr82 =null;
 
 
         AslTree b_tree=null;
-        AslTree ID76_tree=null;
-        AslTree INT77_tree=null;
-        AslTree DOUBLE78_tree=null;
-        AslTree char_literal80_tree=null;
-        AslTree char_literal82_tree=null;
+        AslTree ID77_tree=null;
+        AslTree INT78_tree=null;
+        AslTree DOUBLE79_tree=null;
+        AslTree char_literal81_tree=null;
+        AslTree char_literal83_tree=null;
         RewriteRuleTokenStream stream_TRUE=new RewriteRuleTokenStream(adaptor,"token TRUE");
         RewriteRuleTokenStream stream_FALSE=new RewriteRuleTokenStream(adaptor,"token FALSE");
 
         try {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:9: ( ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
-            int alt20=6;
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:9: ( note | ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
+            int alt20=7;
             switch ( input.LA(1) ) {
+            case NOTE:
+                {
+                alt20=1;
+                }
+                break;
             case ID:
                 {
-                int LA20_1 = input.LA(2);
+                int LA20_2 = input.LA(2);
 
-                if ( (LA20_1==51) ) {
-                    alt20=5;
+                if ( (LA20_2==51) ) {
+                    alt20=6;
                 }
-                else if ( (LA20_1==AND||(LA20_1 >= DIV && LA20_1 <= DO)||(LA20_1 >= ELSE && LA20_1 <= EQUAL)||(LA20_1 >= GE && LA20_1 <= GT)||LA20_1==LE||(LA20_1 >= LT && LA20_1 <= MUL)||(LA20_1 >= NOT_EQUAL && LA20_1 <= OR)||LA20_1==PLUS||LA20_1==THEN||(LA20_1 >= 52 && LA20_1 <= 54)) ) {
-                    alt20=1;
+                else if ( (LA20_2==AND||(LA20_2 >= DIV && LA20_2 <= DO)||(LA20_2 >= ELSE && LA20_2 <= EQUAL)||(LA20_2 >= GE && LA20_2 <= GT)||LA20_2==LE||(LA20_2 >= LT && LA20_2 <= MUL)||(LA20_2 >= NOT_EQUAL && LA20_2 <= OR)||LA20_2==PLUS||LA20_2==THEN||(LA20_2 >= 52 && LA20_2 <= 54)) ) {
+                    alt20=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 20, 1, input);
+                        new NoViableAltException("", 20, 2, input);
 
                     throw nvae;
 
@@ -2639,23 +2646,23 @@ public TreeAdaptor getTreeAdaptor() {
                 break;
             case INT:
                 {
-                alt20=2;
+                alt20=3;
                 }
                 break;
             case DOUBLE:
                 {
-                alt20=3;
+                alt20=4;
                 }
                 break;
             case FALSE:
             case TRUE:
                 {
-                alt20=4;
+                alt20=5;
                 }
                 break;
             case 51:
                 {
-                alt20=6;
+                alt20=7;
                 }
                 break;
             default:
@@ -2668,54 +2675,69 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt20) {
                 case 1 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:12: ID
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:12: note
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    ID76=(Token)match(input,ID,FOLLOW_ID_in_atom1065); 
-                    ID76_tree = 
-                    (AslTree)adaptor.create(ID76)
-                    ;
-                    adaptor.addChild(root_0, ID76_tree);
+                    pushFollow(FOLLOW_note_in_atom1065);
+                    note76=note();
 
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, note76.getTree());
 
                     }
                     break;
                 case 2 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:151:13: INT
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:151:6: ID
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    INT77=(Token)match(input,INT,FOLLOW_INT_in_atom1080); 
-                    INT77_tree = 
-                    (AslTree)adaptor.create(INT77)
+                    ID77=(Token)match(input,ID,FOLLOW_ID_in_atom1072); 
+                    ID77_tree = 
+                    (AslTree)adaptor.create(ID77)
                     ;
-                    adaptor.addChild(root_0, INT77_tree);
+                    adaptor.addChild(root_0, ID77_tree);
 
 
                     }
                     break;
                 case 3 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:152:6: DOUBLE
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:152:13: INT
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    DOUBLE78=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_atom1087); 
-                    DOUBLE78_tree = 
-                    (AslTree)adaptor.create(DOUBLE78)
+                    INT78=(Token)match(input,INT,FOLLOW_INT_in_atom1087); 
+                    INT78_tree = 
+                    (AslTree)adaptor.create(INT78)
                     ;
-                    adaptor.addChild(root_0, DOUBLE78_tree);
+                    adaptor.addChild(root_0, INT78_tree);
 
 
                     }
                     break;
                 case 4 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:13: (b= TRUE |b= FALSE )
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:6: DOUBLE
                     {
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:13: (b= TRUE |b= FALSE )
+                    root_0 = (AslTree)adaptor.nil();
+
+
+                    DOUBLE79=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_atom1094); 
+                    DOUBLE79_tree = 
+                    (AslTree)adaptor.create(DOUBLE79)
+                    ;
+                    adaptor.addChild(root_0, DOUBLE79_tree);
+
+
+                    }
+                    break;
+                case 5 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:154:13: (b= TRUE |b= FALSE )
+                    {
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:154:13: (b= TRUE |b= FALSE )
                     int alt19=2;
                     int LA19_0 = input.LA(1);
 
@@ -2734,18 +2756,18 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt19) {
                         case 1 :
-                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:14: b= TRUE
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:154:14: b= TRUE
                             {
-                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom1104);  
+                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom1111);  
                             stream_TRUE.add(b);
 
 
                             }
                             break;
                         case 2 :
-                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:23: b= FALSE
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:154:23: b= FALSE
                             {
-                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom1110);  
+                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom1117);  
                             stream_FALSE.add(b);
 
 
@@ -2766,9 +2788,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 153:33: -> ^( BOOLEAN[$b,$b.text] )
+                    // 154:33: -> ^( BOOLEAN[$b,$b.text] )
                     {
-                        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:36: ^( BOOLEAN[$b,$b.text] )
+                        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:154:36: ^( BOOLEAN[$b,$b.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -2785,37 +2807,37 @@ public TreeAdaptor getTreeAdaptor() {
 
                     }
                     break;
-                case 5 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:154:13: funcall
+                case 6 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:155:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_funcall_in_atom1133);
-                    funcall79=funcall();
+                    pushFollow(FOLLOW_funcall_in_atom1140);
+                    funcall80=funcall();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, funcall79.getTree());
+                    adaptor.addChild(root_0, funcall80.getTree());
 
                     }
                     break;
-                case 6 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:155:13: '(' ! expr ')' !
+                case 7 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:13: '(' ! expr ')' !
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    char_literal80=(Token)match(input,51,FOLLOW_51_in_atom1147); 
+                    char_literal81=(Token)match(input,51,FOLLOW_51_in_atom1154); 
 
-                    pushFollow(FOLLOW_expr_in_atom1150);
-                    expr81=expr();
+                    pushFollow(FOLLOW_expr_in_atom1157);
+                    expr82=expr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, expr81.getTree());
+                    adaptor.addChild(root_0, expr82.getTree());
 
-                    char_literal82=(Token)match(input,52,FOLLOW_52_in_atom1152); 
+                    char_literal83=(Token)match(input,52,FOLLOW_52_in_atom1159); 
 
                     }
                     break;
@@ -2850,7 +2872,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "funcall"
-    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
     public final AslParser.funcall_return funcall() throws RecognitionException {
         AslParser.funcall_return retval = new AslParser.funcall_return();
         retval.start = input.LT(1);
@@ -2858,48 +2880,48 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token ID83=null;
-        Token char_literal84=null;
-        Token char_literal86=null;
-        AslParser.expr_list_return expr_list85 =null;
+        Token ID84=null;
+        Token char_literal85=null;
+        Token char_literal87=null;
+        AslParser.expr_list_return expr_list86 =null;
 
 
-        AslTree ID83_tree=null;
-        AslTree char_literal84_tree=null;
-        AslTree char_literal86_tree=null;
+        AslTree ID84_tree=null;
+        AslTree char_literal85_tree=null;
+        AslTree char_literal87_tree=null;
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
         RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
         RewriteRuleSubtreeStream stream_expr_list=new RewriteRuleSubtreeStream(adaptor,"rule expr_list");
         try {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:13: ID '(' ( expr_list )? ')'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:13: ID '(' ( expr_list )? ')'
             {
-            ID83=(Token)match(input,ID,FOLLOW_ID_in_funcall1173);  
-            stream_ID.add(ID83);
+            ID84=(Token)match(input,ID,FOLLOW_ID_in_funcall1180);  
+            stream_ID.add(ID84);
 
 
-            char_literal84=(Token)match(input,51,FOLLOW_51_in_funcall1175);  
-            stream_51.add(char_literal84);
+            char_literal85=(Token)match(input,51,FOLLOW_51_in_funcall1182);  
+            stream_51.add(char_literal85);
 
 
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:20: ( expr_list )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:20: ( expr_list )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==DOUBLE||LA21_0==FALSE||LA21_0==ID||LA21_0==INT||LA21_0==MINUS||LA21_0==NOT||LA21_0==PLUS||LA21_0==TRUE||LA21_0==51) ) {
+            if ( (LA21_0==DOUBLE||LA21_0==FALSE||LA21_0==ID||LA21_0==INT||LA21_0==MINUS||(LA21_0 >= NOT && LA21_0 <= NOTE)||LA21_0==PLUS||LA21_0==TRUE||LA21_0==51) ) {
                 alt21=1;
             }
             switch (alt21) {
                 case 1 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:20: expr_list
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:20: expr_list
                     {
-                    pushFollow(FOLLOW_expr_list_in_funcall1177);
-                    expr_list85=expr_list();
+                    pushFollow(FOLLOW_expr_list_in_funcall1184);
+                    expr_list86=expr_list();
 
                     state._fsp--;
 
-                    stream_expr_list.add(expr_list85.getTree());
+                    stream_expr_list.add(expr_list86.getTree());
 
                     }
                     break;
@@ -2907,12 +2929,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal86=(Token)match(input,52,FOLLOW_52_in_funcall1180);  
-            stream_52.add(char_literal86);
+            char_literal87=(Token)match(input,52,FOLLOW_52_in_funcall1187);  
+            stream_52.add(char_literal87);
 
 
             // AST REWRITE
-            // elements: expr_list, ID
+            // elements: ID, expr_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2922,9 +2944,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 159:35: -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
+            // 160:35: -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
             {
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -2935,14 +2957,14 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_ID.nextNode()
                 );
 
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:51: ^( ARGLIST ( expr_list )? )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:51: ^( ARGLIST ( expr_list )? )
                 {
                 AslTree root_2 = (AslTree)adaptor.nil();
                 root_2 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(ARGLIST, "ARGLIST")
                 , root_2);
 
-                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:159:61: ( expr_list )?
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:160:61: ( expr_list )?
                 if ( stream_expr_list.hasNext() ) {
                     adaptor.addChild(root_2, stream_expr_list.nextTree());
 
@@ -2991,7 +3013,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr_list"
-    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:1: expr_list : expr ( ',' ! expr )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:1: expr_list : expr ( ',' ! expr )* ;
     public final AslParser.expr_list_return expr_list() throws RecognitionException {
         AslParser.expr_list_return retval = new AslParser.expr_list_return();
         retval.start = input.LT(1);
@@ -2999,29 +3021,29 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal88=null;
-        AslParser.expr_return expr87 =null;
+        Token char_literal89=null;
+        AslParser.expr_return expr88 =null;
 
-        AslParser.expr_return expr89 =null;
+        AslParser.expr_return expr90 =null;
 
 
-        AslTree char_literal88_tree=null;
+        AslTree char_literal89_tree=null;
 
         try {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:10: ( expr ( ',' ! expr )* )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:13: expr ( ',' ! expr )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:10: ( expr ( ',' ! expr )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:13: expr ( ',' ! expr )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_expr_in_expr_list1213);
-            expr87=expr();
+            pushFollow(FOLLOW_expr_in_expr_list1220);
+            expr88=expr();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, expr87.getTree());
+            adaptor.addChild(root_0, expr88.getTree());
 
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:18: ( ',' ! expr )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:18: ( ',' ! expr )*
             loop22:
             do {
                 int alt22=2;
@@ -3034,16 +3056,16 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt22) {
             	case 1 :
-            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:19: ',' ! expr
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:19: ',' ! expr
             	    {
-            	    char_literal88=(Token)match(input,53,FOLLOW_53_in_expr_list1216); 
+            	    char_literal89=(Token)match(input,53,FOLLOW_53_in_expr_list1223); 
 
-            	    pushFollow(FOLLOW_expr_in_expr_list1219);
-            	    expr89=expr();
+            	    pushFollow(FOLLOW_expr_in_expr_list1226);
+            	    expr90=expr();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, expr89.getTree());
+            	    adaptor.addChild(root_0, expr90.getTree());
 
             	    }
             	    break;
@@ -3085,7 +3107,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "note"
-    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:1: note : NOTE ^ ( INT )? ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:1: note : NOTE ^ ( INT )? ;
     public final AslParser.note_return note() throws RecognitionException {
         AslParser.note_return retval = new AslParser.note_return();
         retval.start = input.LT(1);
@@ -3093,27 +3115,27 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token NOTE90=null;
-        Token INT91=null;
+        Token NOTE91=null;
+        Token INT92=null;
 
-        AslTree NOTE90_tree=null;
-        AslTree INT91_tree=null;
+        AslTree NOTE91_tree=null;
+        AslTree INT92_tree=null;
 
         try {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:6: ( NOTE ^ ( INT )? )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:8: NOTE ^ ( INT )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:6: ( NOTE ^ ( INT )? )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:8: NOTE ^ ( INT )?
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            NOTE90=(Token)match(input,NOTE,FOLLOW_NOTE_in_note1237); 
-            NOTE90_tree = 
-            (AslTree)adaptor.create(NOTE90)
+            NOTE91=(Token)match(input,NOTE,FOLLOW_NOTE_in_note1244); 
+            NOTE91_tree = 
+            (AslTree)adaptor.create(NOTE91)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(NOTE90_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(NOTE91_tree, root_0);
 
 
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:14: ( INT )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:14: ( INT )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -3122,13 +3144,13 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt23) {
                 case 1 :
-                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:14: INT
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:15: INT
                     {
-                    INT91=(Token)match(input,INT,FOLLOW_INT_in_note1240); 
-                    INT91_tree = 
-                    (AslTree)adaptor.create(INT91)
+                    INT92=(Token)match(input,INT,FOLLOW_INT_in_note1248); 
+                    INT92_tree = 
+                    (AslTree)adaptor.create(INT92)
                     ;
-                    adaptor.addChild(root_0, INT91_tree);
+                    adaptor.addChild(root_0, INT92_tree);
 
 
                     }
@@ -3193,74 +3215,75 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_read_in_instruction534 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_write_in_instruction559 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_assign617 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_EQUAL_in_assign621 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_EQUAL_in_assign621 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_expr_in_assign623 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_note_in_assignnote654 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_EQUAL_in_assignnote658 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_EQUAL_in_assignnote658 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_expr_in_assignnote660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ite_stmt689 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_IF_in_ite_stmt689 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_expr_in_ite_stmt692 = new BitSet(new long[]{0x0000200000000000L});
     public static final BitSet FOLLOW_THEN_in_ite_stmt694 = new BitSet(new long[]{0x00418C0803000000L});
     public static final BitSet FOLLOW_block_instructions_in_ite_stmt697 = new BitSet(new long[]{0x000000000000A000L});
     public static final BitSet FOLLOW_ELSE_in_ite_stmt700 = new BitSet(new long[]{0x00418C0803000000L});
     public static final BitSet FOLLOW_block_instructions_in_ite_stmt703 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_ENDIF_in_ite_stmt707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_while_stmt730 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_WHILE_in_while_stmt730 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_expr_in_while_stmt733 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_DO_in_while_stmt735 = new BitSet(new long[]{0x00418C0803000000L});
     public static final BitSet FOLLOW_block_instructions_in_while_stmt738 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_ENDWHILE_in_while_stmt740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_return_stmt763 = new BitSet(new long[]{0x0008408485081002L});
+    public static final BitSet FOLLOW_RETURN_in_return_stmt763 = new BitSet(new long[]{0x0008408C85081002L});
     public static final BitSet FOLLOW_expr_in_return_stmt766 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_READ_in_read785 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_ID_in_read788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WRITE_in_write808 = new BitSet(new long[]{0x0008508485081000L});
+    public static final BitSet FOLLOW_WRITE_in_write808 = new BitSet(new long[]{0x0008508C85081000L});
     public static final BitSet FOLLOW_expr_in_write812 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_STRING_in_write816 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_boolterm_in_expr841 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_OR_in_expr844 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_OR_in_expr844 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_boolterm_in_expr847 = new BitSet(new long[]{0x0000002000000002L});
     public static final BitSet FOLLOW_boolfact_in_boolterm867 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_AND_in_boolterm870 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_AND_in_boolterm870 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_boolfact_in_boolterm873 = new BitSet(new long[]{0x0000000000000012L});
     public static final BitSet FOLLOW_num_expr_in_boolfact893 = new BitSet(new long[]{0x0000001048C20002L});
-    public static final BitSet FOLLOW_EQUAL_in_boolfact897 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact902 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_LT_in_boolfact907 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_LE_in_boolfact912 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_GT_in_boolfact917 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_GE_in_boolfact922 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_EQUAL_in_boolfact897 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact902 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_LT_in_boolfact907 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_LE_in_boolfact912 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_GT_in_boolfact917 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_GE_in_boolfact922 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_num_expr_in_boolfact926 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_term_in_num_expr946 = new BitSet(new long[]{0x0000008080000002L});
-    public static final BitSet FOLLOW_PLUS_in_num_expr951 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_MINUS_in_num_expr956 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_PLUS_in_num_expr951 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_MINUS_in_num_expr956 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_term_in_num_expr960 = new BitSet(new long[]{0x0000008080000002L});
     public static final BitSet FOLLOW_factor_in_term984 = new BitSet(new long[]{0x0000000300000402L});
-    public static final BitSet FOLLOW_MUL_in_term989 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_DIV_in_term994 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_MOD_in_term999 = new BitSet(new long[]{0x0008408485081000L});
+    public static final BitSet FOLLOW_MUL_in_term989 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_DIV_in_term994 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_MOD_in_term999 = new BitSet(new long[]{0x0008408C85081000L});
     public static final BitSet FOLLOW_factor_in_term1003 = new BitSet(new long[]{0x0000000300000402L});
-    public static final BitSet FOLLOW_NOT_in_factor1026 = new BitSet(new long[]{0x0008400005081000L});
-    public static final BitSet FOLLOW_PLUS_in_factor1031 = new BitSet(new long[]{0x0008400005081000L});
-    public static final BitSet FOLLOW_MINUS_in_factor1036 = new BitSet(new long[]{0x0008400005081000L});
+    public static final BitSet FOLLOW_NOT_in_factor1026 = new BitSet(new long[]{0x0008400805081000L});
+    public static final BitSet FOLLOW_PLUS_in_factor1031 = new BitSet(new long[]{0x0008400805081000L});
+    public static final BitSet FOLLOW_MINUS_in_factor1036 = new BitSet(new long[]{0x0008400805081000L});
     public static final BitSet FOLLOW_atom_in_factor1041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atom1065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_atom1080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOUBLE_in_atom1087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_atom1104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_atom1110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_funcall_in_atom1133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_atom1147 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_expr_in_atom1150 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_atom1152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_funcall1173 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_51_in_funcall1175 = new BitSet(new long[]{0x0018408485081000L});
-    public static final BitSet FOLLOW_expr_list_in_funcall1177 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_funcall1180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_expr_list1213 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_53_in_expr_list1216 = new BitSet(new long[]{0x0008408485081000L});
-    public static final BitSet FOLLOW_expr_in_expr_list1219 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_NOTE_in_note1237 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_INT_in_note1240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_note_in_atom1065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atom1072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom1087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOUBLE_in_atom1094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_atom1111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_atom1117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_funcall_in_atom1140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_atom1154 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_expr_in_atom1157 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_atom1159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_funcall1180 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_51_in_funcall1182 = new BitSet(new long[]{0x0018408C85081000L});
+    public static final BitSet FOLLOW_expr_list_in_funcall1184 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_funcall1187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_expr_list1220 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_53_in_expr_list1223 = new BitSet(new long[]{0x0008408C85081000L});
+    public static final BitSet FOLLOW_expr_in_expr_list1226 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_NOTE_in_note1244 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_INT_in_note1248 = new BitSet(new long[]{0x0000000000000002L});
 
 }
