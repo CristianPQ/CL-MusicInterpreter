@@ -38,6 +38,7 @@ tokens {
     LIST_FUNCTIONS; // List of functions (the root of the tree)
     ASSIGN;     // Assignment instruction
     ASSIGNNOTE;     // Assignment instruction
+    ASSIGNDURATION;
     PARAMS;     // List of parameters in the declaration of a function
     FUNCALL;    // Function call
     ARGLIST;    // List of arguments passed in a function call
@@ -198,8 +199,8 @@ WRITE	: 'write' ;
 TRUE    : 'true' ;
 FALSE   : 'false';
 NOTE    : 'n' ('do'|'re'|'mi'|'fa'|'sol'|'la'|'si');
-ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 DURATION: ( 'rodona'| 'negra'| 'blanca'| 'corxera' | 'semicorxera');
+ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 INT 	:	'0'..'9'+ ;
 DOUBLE	:	'0'..'9'+ '.' '0'..'9'+;
 

@@ -254,22 +254,23 @@ public class Interp {
                 return null;
 			//Assignment of a Duration
 			case AslLexer.ASSIGNDURATION:
+                System.out.println("im in ASSIGNDURATION");
 				value = evaluateExpression(t.getChild(1));
 				double valueRodona = value.getDoubleValue();
 				String note = t.getChild(0).getText();
-				if(note.equals("blanca"){
+				if(note.equals("blanca")){
 					valueRodona *=2;
 				}
-				else if(note.equals("negra"){
+				else if(note.equals("negra")){
 					valueRodona *=4;
 				}
-				else if(note.equals("corxera"){
+				else if(note.equals("corxera")){
 					valueRodona *=8;
 				}
-				else if(note.equals("semicorxera"){
+				else if(note.equals("semicorxera")){
 					valueRodona *=16;
 				}
-				Data temp(valueRodona);
+				Data temp = new Data(valueRodona);
 				Stack.defineVariable ("rodona", temp);
 				temp.setValue(valueRodona/2);
 				Stack.defineVariable ("blanca", temp);
