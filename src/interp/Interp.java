@@ -239,7 +239,34 @@ public class Interp {
             case AslLexer.ASSIGNNOTE:
                 //
                 return null;
-
+			//Assignment of a Duration
+			case AslLexer.ASSIGNDURATION:
+				value = evaluateExpression(t.getChild(1));
+				double valueRodona = value.getDoubleValue();
+				String note = t.getChild(0).getText();
+				if(note.equals("blanca"){
+					valueRodona *=2;
+				}
+				else if(note.equals("negra"){
+					valueRodona *=4;
+				}
+				else if(note.equals("corxera"){
+					valueRodona *=8;
+				}
+				else if(note.equals("semicorxera"){
+					valueRodona *=16;
+				}
+				Data temp(valueRodona);
+				Stack.defineVariable ("rodona", temp);
+				temp.setValue(valueRodona/2);
+				Stack.defineVariable ("blanca", temp);
+				temp.setValue(valueRodona/4);
+				Stack.defineVariable ("negra", temp);
+				temp.setValue(valueRodona/8);
+				Stack.defineVariable ("corxera", temp);
+				temp.setValue(valueRodona/16);
+				Stack.defineVariable ("sem	icorxera", temp);
+				return null;
             // Assignment
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));

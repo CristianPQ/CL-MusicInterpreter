@@ -88,6 +88,7 @@ block_instructions
 // The different types of instructions
 instruction
         :	assignnote          // Assignment
+        | assignduration
         | assign
         |	ite_stmt        // if-then-else
         |	while_stmt      // while statement
@@ -104,6 +105,8 @@ assign	:	ID eq=EQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
 
 assignnote  :   note eq=EQUAL expr -> ^(ASSIGNNOTE[$eq,":="] note expr)
         ;
+assignduration: DURATION eq=EQUAL expr -> ^(ASSIGNDURATION[$eq,":="] DURATION expr)
+	;
 
 // if-then-else (else is optional)
 ite_stmt	:	IF^ expr THEN! block_instructions (ELSE! block_instructions)? ENDIF!
@@ -149,7 +152,7 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // in parenthesis
 atom    :  ID 
         |   INT
-	|   DOUBLE
+        |   DOUBLE
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
         |   '('! expr ')'!
@@ -195,6 +198,7 @@ TRUE    : 'true' ;
 FALSE   : 'false';
 NOTE    : 'n' ('do'|'re'|'mi'|'fa'|'sol'|'la'|'si');
 ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
+DURATION: ( 'rodona'| 'negra'| 'blanca'| 'corxera' | 'semicorxera');
 INT 	:	'0'..'9'+ ;
 DOUBLE	:	'0'..'9'+ '.' '0'..'9'+;
 

@@ -17,6 +17,9 @@ Cristian Miguel Pinto Quinto
 					...
 	- Duration : double : seconds
 		- De defina una duracion, y se autodefine el resto
+		- Definimos las duraciones como: rodona, blanca, negra, corxera, semicorxera
+		
+		
 		EXTRA: - default
 		EXAMPLE: 
 			d = 1 --> un segundo

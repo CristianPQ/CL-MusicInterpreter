@@ -111,6 +111,8 @@ public class Data {
 
     /** Defines an integer value for the data */
     public void setValue(int v) { type = Type.INTEGER; value = v; }
+    
+	public void setValue(double v) {type = Type.DOUBLE; value = v;}
 
     /** Copies the value from another data */
     public void setData(Data d) { type = d.type; value = d.value; }
