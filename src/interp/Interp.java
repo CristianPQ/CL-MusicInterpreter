@@ -237,7 +237,20 @@ public class Interp {
         switch (t.getType()) {
 
             case AslLexer.ASSIGNNOTE:
-                //
+                System.out.println("child 0 ");
+                System.out.println(t.getChild(0).getChildCount());
+                if (t.getChild(0).getChildCount() == 1) {
+
+                    System.out.println("child child value");
+                    System.out.println(t.getChild(0).getChild(0).getText());
+                }
+                
+
+                String auxStr = t.getChild(0).getText();
+                String auxStr2 = auxStr.substring(1);
+                //System.out.println(auxStr2);
+                System.out.println("child 1 ");
+                System.out.println(t.getChild(1).getText());
                 return null;
 			//Assignment of a Duration
 			case AslLexer.ASSIGNDURATION:
