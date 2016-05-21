@@ -291,9 +291,11 @@ public class Interp {
                 return null;
 			//Assignment of a Duration
 			case AslLexer.ASSIGNDURATION:
-                System.out.println("im in ASSIGNDURATION");
 				value = evaluateExpression(t.getChild(1));
-				double valueRodona = value.getDoubleValue();
+				double valueRodona;
+				if(value.isInteger()) valueRodona = (double) value.getIntegerValue();
+				else valueRodona = value.getDoubleValue();
+
 				String note = t.getChild(0).getText();
 				if(note.equals("blanca")){
 					valueRodona *=2;
@@ -308,15 +310,25 @@ public class Interp {
 					valueRodona *=16;
 				}
 				Data temp = new Data(valueRodona);
+				Data tempb = new Data(valueRodona / 2);
+				Data tempn = new Data(valueRodona / 4);
+				Data tempc = new Data(valueRodona / 8);
+				Data tempsc = new Data(valueRodona / 16);
+				
 				Stack.defineVariable ("rodona", temp);
-				temp.setValue(valueRodona/2);
-				Stack.defineVariable ("blanca", temp);
-				temp.setValue(valueRodona/4);
-				Stack.defineVariable ("negra", temp);
-				temp.setValue(valueRodona/8);
-				Stack.defineVariable ("corxera", temp);
-				temp.setValue(valueRodona/16);
-				Stack.defineVariable ("sem	icorxera", temp);
+				Stack.defineVariable ("blanca", tempb);
+				Stack.defineVariable ("negra", tempn);
+				Stack.defineVariable ("corxera", tempc);
+				Stack.defineVariable ("semicorxera", tempsc);
+				
+				System.out.println("Rodona: " + (Stack.getVariable("rodona")).getDoubleValue());
+				System.out.println("Blanca: " +(Stack.getVariable("blanca")).getDoubleValue());
+				System.out.println("Negra: " +(Stack.getVariable("negra")).getDoubleValue());
+				System.out.println("Corxera: " +(Stack.getVariable("corxera")).getDoubleValue());
+				System.out.println("SemiCorxera: " +(Stack.getVariable("semicorxera")).getDoubleValue());
+				System.out.println("----------------------------------------------------------------");
+				
+				
 				return null;
             // Assignment
             case AslLexer.ASSIGN:
@@ -410,6 +422,9 @@ public class Interp {
             case AslLexer.ID:
                 value = new Data(Stack.getVariable(t.getText()));
                 break;
+            case AslLexer.DURATION:
+                value = new Data(Stack.getVariable(t.getText()));
+                break;
             // An integer literal
             case AslLexer.INT:
                 value = new Data(t.getIntValue());
@@ -444,10 +459,10 @@ public class Interp {
         if (t.getChildCount() == 1) {
             switch (type) {
                 case AslLexer.PLUS:
-                    checkInteger(value);
+                    checkNumeric(value);
                     break;
                 case AslLexer.MINUS:
-                    checkInteger(value);
+                    checkNumeric(value);
                     value.setValue(-value.getIntegerValue());
                     break;
                 case AslLexer.NOT:
@@ -484,7 +499,7 @@ public class Interp {
             case AslLexer.DIV:
             case AslLexer.MOD:
                 value2 = evaluateExpression(t.getChild(1));
-                checkInteger(value); checkInteger(value2);
+                checkNumeric(value); checkNumeric(value2);
                 value.evaluateArithmetic(type, value2);
                 break;
 
@@ -547,9 +562,23 @@ public class Interp {
     /** Checks that the data is integer and raises an exception if it is not. */
     private void checkInteger (Data b) {
         if (!b.isInteger()) {
-            throw new RuntimeException ("Expecting numerical expression");
+            throw new RuntimeException ("Expecting numerical(Int) expression");
         }
     }
+    
+    private void checkDouble (Data b){
+		if(!b.isDouble()){
+			throw new RuntimeException ("Expecting numerical(Double) expression");
+		}
+	}
+	
+	private void checkNumeric(Data b){
+		if(!b.isDouble() && !b.isInteger()){
+			throw new RuntimeException ("Expecting numerical expression");
+		}
+	}
+    
+    
 
     /**
      * Gathers the list of arguments of a function call. It also checks

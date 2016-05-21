@@ -140,7 +140,10 @@ public class Data {
      
     public void evaluateArithmetic (int op, Data d) {
         assert (type == Type.INTEGER && d.type == Type.INTEGER) ||
-            (type == Type.DOUBLE && d.type == Type.DOUBLE);
+            (type == Type.DOUBLE && d.type == Type.DOUBLE)		||
+			(type == Type.DOUBLE && d.type == Type.INTEGER)		||
+			(type == Type.INTEGER && d.type == Type.DOUBLE)
+            ;
         switch (op) {
             case AslLexer.PLUS: value += d.value; break;
             case AslLexer.MINUS: value -= d.value; break;
