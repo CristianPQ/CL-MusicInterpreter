@@ -151,8 +151,7 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // Atom of the expressions (variables, integer and boolean literals).
 // An atom can also be a function call or another expression
 // in parenthesis
-atom    :  note
-	|   ID 
+atom    :  ID 
         |   INT
         |   DOUBLE
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
@@ -200,6 +199,7 @@ TRUE    : 'true' ;
 FALSE   : 'false';
 NOTE    : 'n' ('do'|'re'|'mi'|'fa'|'sol'|'la'|'si');
 DURATION: ( 'rodona'| 'negra'| 'blanca'| 'corxera' | 'semicorxera');
+PLAY	: 'play';
 ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 INT 	:	'0'..'9'+ ;
 DOUBLE	:	'0'..'9'+ '.' '0'..'9'+;

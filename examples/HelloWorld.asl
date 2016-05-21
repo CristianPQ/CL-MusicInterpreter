@@ -1,7 +1,3 @@
 func main()
-  ndo = 3;
-
-  negra = 2;
-
-
+  nsi 2= 0;
 endfunc

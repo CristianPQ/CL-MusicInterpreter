@@ -237,20 +237,57 @@ public class Interp {
         switch (t.getType()) {
 
             case AslLexer.ASSIGNNOTE:
-                System.out.println("child 0 ");
-                System.out.println(t.getChild(0).getChildCount());
+                double aux = 0;
                 if (t.getChild(0).getChildCount() == 1) {
 
                     System.out.println("child child value");
                     System.out.println(t.getChild(0).getChild(0).getText());
+                    aux = Double.parseDouble(t.getChild(0).getChild(0).getText());
                 }
-                
 
                 String auxStr = t.getChild(0).getText();
                 String auxStr2 = auxStr.substring(1);
-                //System.out.println(auxStr2);
+                System.out.println(auxStr2);
                 System.out.println("child 1 ");
-                System.out.println(t.getChild(1).getText());
+                value = evaluateExpression(t.getChild(1));
+                if (value.isInteger()) {
+                    double auxDataValue = (double) value.getIntegerValue();
+                    value.setValue(auxDataValue);
+                }
+                double auxFinalValue = value.getDoubleValue();
+                System.out.println(value.getDoubleValue());
+
+                switch(auxStr2) {
+                    case "re":
+                        auxFinalValue = auxFinalValue -1;
+                        break;
+                    case "mi":
+                        auxFinalValue = auxFinalValue -2;
+                        break;
+                    case "fa":
+                        auxFinalValue = auxFinalValue -3;
+                        break;
+                    case "sol":
+                        auxFinalValue = auxFinalValue -4;
+                        break;
+                    case "la":
+                        auxFinalValue = auxFinalValue -5;
+                        break;
+                    case "si":
+                        auxFinalValue = auxFinalValue -6;
+                        break;
+                    default:
+                        break;
+                }
+
+                auxFinalValue = auxFinalValue - (7*aux);
+
+                value.setValue(auxFinalValue);
+                Stack.defineVariable ("do", value);
+                System.out.println(value.getDoubleValue());
+
+
+
                 return null;
 			//Assignment of a Duration
 			case AslLexer.ASSIGNDURATION:
