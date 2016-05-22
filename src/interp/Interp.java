@@ -245,7 +245,7 @@ public class Interp {
                 //System.out.println("IN PLAY");
 
                 Data noteData = evaluateExpression(t.getChild(0));
-
+				
                 Data auxDo = new Data(Stack.getVariable("do"));
 
                 double auxNoteData = auxDo.getDoubleValue() + noteData.getDoubleValue();
@@ -254,6 +254,7 @@ public class Interp {
 
                 //System.out.println("before duration");
                 Data durationData = evaluateExpression(t.getChild(1));
+				System.out.println(durationData.getDoubleValue());
 
                 System.out.println("    NOTE");
                 System.out.println("    " + noteData.toString());
@@ -319,9 +320,9 @@ public class Interp {
 					i++;
 				}
 
-				Data tempS = new Data(comp);
-				Stack.defineVariable(nom, tempS); 
+				value = new Data(comp);
 				
+				Stack.defineVariable(nom, value);
 				return null;
 			
             case AslLexer.ASSIGNNOTE:
@@ -383,7 +384,6 @@ public class Interp {
 				System.out.println("Corxera: " +(Stack.getVariable("corxera")).getDoubleValue());
 				System.out.println("SemiCorxera: " +(Stack.getVariable("semicorxera")).getDoubleValue());
 				System.out.println("----------------------------------------------------------------");
-				
 				
 				return null;
             // Assignment
@@ -528,6 +528,7 @@ public class Interp {
             case AslLexer.DURATION:
                 value = new Data(Stack.getVariable(t.getText()));
                 break;
+            
             // An integer literal
             case AslLexer.INT:
                 value = new Data(t.getIntValue());
@@ -540,6 +541,10 @@ public class Interp {
             case AslLexer.BOOLEAN:
                 value = new Data(t.getBooleanValue());
                 break;
+            case AslLexer.STRING:
+				value = new Data(t.getStringValue());
+				break;
+            
             // A function call. Checks that the function returns a result.
             case AslLexer.FUNCALL:
                 value = executeFunction(t.getChild(0).getText(), t.getChild(1));

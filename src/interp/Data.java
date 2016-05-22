@@ -68,7 +68,7 @@ public class Data {
     Data() {type = Type.VOID; }
 
     /** Copy constructor */
-    Data(Data d) { type = d.type; value = d.value; }
+    Data(Data d) { type = d.type; value = d.value; valueS = d.valueS; }
 
     /** Returns the type of data */
     public Type getType() { return type; }
@@ -134,6 +134,8 @@ public class Data {
     public void setValue(int v) { type = Type.INTEGER; value = v; }
     
 	public void setValue(double v) {type = Type.DOUBLE; value = v;}
+	
+	public void setValue(String v) {type = Type.STRING; valueS = v;}
 
     /** Copies the value from another data */
     public void setData(Data d) { type = d.type; value = d.value; }
@@ -141,7 +143,10 @@ public class Data {
     /** Returns a string representing the data in textual form. */
     public String toString() {
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
-        return Integer.toString((int)value);
+        else if(type == Type.STRING) return valueS;
+        else if(type == Type.DOUBLE) return Double.toString(value);
+        else if(type == Type.INTEGER) return Integer.toString((int)value);
+        return valueS;
     }
     
     /**
