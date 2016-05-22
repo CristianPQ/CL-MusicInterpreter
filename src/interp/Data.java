@@ -41,8 +41,11 @@ import parser.*;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER, DOUBLE;}
-
+    public enum Type {VOID, BOOLEAN, INTEGER, DOUBLE, STRING;}
+	
+	/** Value of data if is String **/
+	private String valueS;
+    
     /** Type of data*/
     private Type type;
 
@@ -51,7 +54,10 @@ public class Data {
 
     /** Constructor for integers */
     Data(int v) { type = Type.INTEGER; value = (double) v; }
-
+    
+    /** Constructor for String */
+    Data(String v) { type = Type.STRING; valueS = v; }
+ 
     /** Constructor for Booleans */
     Data(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
 
@@ -73,8 +79,12 @@ public class Data {
     /** Indicates whether the data is integer */
     public boolean isInteger() { return type == Type.INTEGER; }
 
+
     /** Indicates whether the data is double */
     public boolean isDouble() { return type == Type.DOUBLE; }
+    
+    /** Indicates whether the data is double */
+    public boolean isString() { return type == Type.STRING; }
 
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
@@ -87,6 +97,17 @@ public class Data {
         assert type == Type.INTEGER;
         return (int) value;
     }
+    
+    
+    /**
+     * Gets the value of an integer data. The method asserts that
+     * the data is an integer.
+     */
+    public String getStringValue() {
+        assert type == Type.STRING;
+        return valueS;
+    }
+
 
     /**
      * Gets the value of a double data. The method asserts that

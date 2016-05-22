@@ -269,12 +269,58 @@ public class Interp {
                     e.printStackTrace();
                 }
                 return null;
+			
+			case AslLexer.COMPAS:
+				String nom = t.getChild(0).getText();
+				int numNotes = (evaluateExpression(t.getChild(1))).getIntegerValue();
+				int num = (evaluateExpression(t.getChild(2))).getIntegerValue();
+				int den = (evaluateExpression(t.getChild(3))).getIntegerValue();
+				String comp = "";
+				int i = 5; 
+				boolean first = true;
+					String tempNote = "";
+					if(den == 1) tempNote = "rodona";
+					if(den == 2) tempNote = "blanca";
+					if(den == 4) tempNote = "negra";
+					if(den == 8) tempNote = "corxera";
+					if(den == 16) tempNote = "semicorxera";
 
+					double compasValue = (Stack.getVariable(tempNote)).getDoubleValue();
+					compasValue *= num;
+					double acum = 0;
+					boolean wrong = false;
+					while(i <= ((numNotes * 2) + 3)){
+						String nota = (t.getChild(i)).getText();
+						acum += (Stack.getVariable(nota)).getDoubleValue();
+						if(acum > compasValue) throw new RuntimeException ("Compas is not correct composed");
+						else if(acum == compasValue){
+							wrong = false;
+							acum = 0;
+						}
+						else wrong = true;
+						i += 2;
+					}
+					if(wrong) throw new RuntimeException ("Compas is not correct composed");
+
+
+				i = 4;
+				while(i <= ((numNotes * 2) + 3)){
+					if(first){
+						comp = comp + (t.getChild(i)).getText();
+						first = false;
+					}
+					else comp = comp + ',' + (t.getChild(i)).getText();
+					i++;
+				}
+
+				Data tempS = new Data(comp);
+				Stack.defineVariable(nom, tempS); 
+				
+				return null;
+			
             case AslLexer.ASSIGNNOTE:
 
                 Data aux = evaluateExpression(t.getChild(0));
-
-
 
                 value = evaluateExpression(t.getChild(1));
                 
