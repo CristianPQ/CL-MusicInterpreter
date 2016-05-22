@@ -88,7 +88,8 @@ block_instructions
 
 // The different types of instructions
 instruction
-        :	assignnote          // Assignment
+        :	play
+        |	assignnote          // Assignment
         | assignduration
         | assign
         |	ite_stmt        // if-then-else
@@ -172,6 +173,9 @@ funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
 expr_list:  expr (','! expr)*
         ;
 note : NOTE^ (INT)?;
+
+play	:	PLAY^ note DURATION
+	;
 
 // Basic tokens
 EQUAL	: '=' ;

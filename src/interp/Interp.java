@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
+import javax.sound.midi.*;
 
 /** Class that implements the interpreter of the language. */
 
@@ -233,58 +234,61 @@ public class Interp {
         setLineNumber(t);
         Data value; // The returned value
 
+        int channel = 0; // 0 is a piano, 9 is percussion, other channels are for other instruments
+
+        int volume = 127; // between 0 et 127
+        int duration = 1000; // in milliseconds
+
         // A big switch for all type of instructions
         switch (t.getType()) {
+            case AslLexer.PLAY:
+                //System.out.println("IN PLAY");
+
+                Data noteData = evaluateExpression(t.getChild(0));
+
+                //System.out.println("before duration");
+                Data durationData = evaluateExpression(t.getChild(1));
+
+                /*System.out.println("    NOTE");
+                System.out.println("    " + noteData.toString());
+                System.out.println("    DURATION");
+                System.out.println("    " + durationData.toString());*/
+                try {
+                    Synthesizer synth = MidiSystem.getSynthesizer();
+                    synth.open();
+                    MidiChannel[] channels = synth.getChannels();
+
+                    channels[channel].noteOn( 60 + ((int)(noteData.getDoubleValue() * 2)), volume ); // C note
+                    Thread.sleep( (int)(duration *(durationData.getDoubleValue())));
+
+
+
+                    synth.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
 
             case AslLexer.ASSIGNNOTE:
-                double aux = 0;
-                if (t.getChild(0).getChildCount() == 1) {
 
-                    System.out.println("child child value");
-                    System.out.println(t.getChild(0).getChild(0).getText());
-                    aux = Double.parseDouble(t.getChild(0).getChild(0).getText());
-                }
+                Data aux = evaluateExpression(t.getChild(0));
 
-                String auxStr = t.getChild(0).getText();
-                String auxStr2 = auxStr.substring(1);
-                System.out.println(auxStr2);
-                System.out.println("child 1 ");
+
+
                 value = evaluateExpression(t.getChild(1));
+                
                 if (value.isInteger()) {
-                    double auxDataValue = (double) value.getIntegerValue();
-                    value.setValue(auxDataValue);
+                    double auxVal = (double) value.getIntegerValue();
+                    value.setValue(auxVal);
                 }
+
                 double auxFinalValue = value.getDoubleValue();
-                System.out.println(value.getDoubleValue());
-
-                switch(auxStr2) {
-                    case "re":
-                        auxFinalValue = auxFinalValue -1;
-                        break;
-                    case "mi":
-                        auxFinalValue = auxFinalValue -2;
-                        break;
-                    case "fa":
-                        auxFinalValue = auxFinalValue -3;
-                        break;
-                    case "sol":
-                        auxFinalValue = auxFinalValue -4;
-                        break;
-                    case "la":
-                        auxFinalValue = auxFinalValue -5;
-                        break;
-                    case "si":
-                        auxFinalValue = auxFinalValue -6;
-                        break;
-                    default:
-                        break;
-                }
-
-                auxFinalValue = auxFinalValue - (7*aux);
+                
 
                 value.setValue(auxFinalValue);
                 Stack.defineVariable ("do", value);
-                System.out.println(value.getDoubleValue());
+                //System.out.println(value.getDoubleValue());
 
 
 
@@ -421,6 +425,51 @@ public class Interp {
             // A variable
             case AslLexer.ID:
                 value = new Data(Stack.getVariable(t.getText()));
+                break;
+            case AslLexer.NOTE:
+                //System.out.println("IN NOTE");
+                double aux = 0;
+                if (t.getChildCount() == 1) {
+
+                    //System.out.println("child child value");
+                    //System.out.println(t.getChild(0).getChild(0).getText());
+                    aux = Double.parseDouble(t.getChild(0).getText());
+                }
+
+                String auxStr = t.getText();
+                String auxStr2 = auxStr.substring(1);
+                //System.out.println(auxStr2);
+                //System.out.println("child 1 ");
+                double auxFinalValue = 0;
+                //System.out.println(value.getDoubleValue());
+
+                switch(auxStr2) {
+                    case "re":
+                        auxFinalValue = auxFinalValue +1;
+                        break;
+                    case "mi":
+                        auxFinalValue = auxFinalValue +2;
+                        break;
+                    case "fa":
+                        auxFinalValue = auxFinalValue +3;
+                        break;
+                    case "sol":
+                        auxFinalValue = auxFinalValue +4;
+                        break;
+                    case "la":
+                        auxFinalValue = auxFinalValue +5;
+                        break;
+                    case "si":
+                        auxFinalValue = auxFinalValue +6;
+                        break;
+                    default:
+                        break;
+                }
+
+                auxFinalValue = auxFinalValue + (7*aux);
+
+                value = new Data(auxFinalValue);
+                //System.out.println(value.getDoubleValue());
                 break;
             case AslLexer.DURATION:
                 value = new Data(Stack.getVariable(t.getText()));
