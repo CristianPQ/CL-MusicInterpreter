@@ -246,13 +246,19 @@ public class Interp {
 
                 Data noteData = evaluateExpression(t.getChild(0));
 
+                Data auxDo = new Data(Stack.getVariable("do"));
+
+                double auxNoteData = auxDo.getDoubleValue() + noteData.getDoubleValue();
+
+                noteData.setValue(auxNoteData);
+
                 //System.out.println("before duration");
                 Data durationData = evaluateExpression(t.getChild(1));
 
-                /*System.out.println("    NOTE");
+                System.out.println("    NOTE");
                 System.out.println("    " + noteData.toString());
                 System.out.println("    DURATION");
-                System.out.println("    " + durationData.toString());*/
+                System.out.println("    " + durationData.toString());
                 try {
                     Synthesizer synth = MidiSystem.getSynthesizer();
                     synth.open();
@@ -511,6 +517,8 @@ public class Interp {
                     default:
                         break;
                 }
+
+                
 
                 auxFinalValue = auxFinalValue + (7*aux);
 
