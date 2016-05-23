@@ -242,8 +242,6 @@ public class Interp {
         // A big switch for all type of instructions
         switch (t.getType()) {
             case AslLexer.PLAY:
-                //System.out.println("IN PLAY");
-
                 Data noteData = evaluateExpression(t.getChild(0));
 				
                 Data auxDo = new Data(Stack.getVariable("do"));
@@ -267,9 +265,6 @@ public class Interp {
 
                     channels[channel].noteOn( 60 + ((int)(noteData.getDoubleValue() * 2)), volume ); // C note
                     Thread.sleep( (int)(duration *(durationData.getDoubleValue())));
-
-
-
                     synth.close();
                 }
                 catch (Exception e) {
