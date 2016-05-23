@@ -278,6 +278,12 @@ public class Interp {
                 return null;
 			
 			case AslLexer.COMPAS:
+                //System.out.print("in compas childs: ");
+                for (int childI = 0; childI < t.getChildCount(); ++childI) {
+                    System.out.print("Child " + childI + ": ");
+                    System.out.println(t.getChild(childI).getText());
+                }
+                
 				String nom = t.getChild(0).getText();
 				int numNotes = (evaluateExpression(t.getChild(1))).getIntegerValue();
 				int num = (evaluateExpression(t.getChild(2))).getIntegerValue();
