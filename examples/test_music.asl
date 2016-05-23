@@ -10,7 +10,7 @@ func starwars(n, d)
    semicorxera=d/16;
 
    i = 1
-   while(i<=3) 
+   while(i<=3) DO 
      play(la,negra)
      i = i+1
    endwhile

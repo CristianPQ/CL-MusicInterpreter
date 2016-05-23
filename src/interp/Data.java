@@ -41,8 +41,11 @@ import parser.*;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER, DOUBLE;}
-
+    public enum Type {VOID, BOOLEAN, INTEGER, DOUBLE, STRING;}
+	
+	/** Value of data if is String **/
+	private String valueS;
+    
     /** Type of data*/
     private Type type;
 
@@ -51,7 +54,10 @@ public class Data {
 
     /** Constructor for integers */
     Data(int v) { type = Type.INTEGER; value = (double) v; }
-
+    
+    /** Constructor for String */
+    Data(String v) { type = Type.STRING; valueS = v; }
+ 
     /** Constructor for Booleans */
     Data(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
 
@@ -62,7 +68,7 @@ public class Data {
     Data() {type = Type.VOID; }
 
     /** Copy constructor */
-    Data(Data d) { type = d.type; value = d.value; }
+    Data(Data d) { type = d.type; value = d.value; valueS = d.valueS; }
 
     /** Returns the type of data */
     public Type getType() { return type; }
@@ -73,8 +79,12 @@ public class Data {
     /** Indicates whether the data is integer */
     public boolean isInteger() { return type == Type.INTEGER; }
 
+
     /** Indicates whether the data is double */
     public boolean isDouble() { return type == Type.DOUBLE; }
+    
+    /** Indicates whether the data is double */
+    public boolean isString() { return type == Type.STRING; }
 
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
@@ -87,6 +97,17 @@ public class Data {
         assert type == Type.INTEGER;
         return (int) value;
     }
+    
+    
+    /**
+     * Gets the value of an integer data. The method asserts that
+     * the data is an integer.
+     */
+    public String getStringValue() {
+        assert type == Type.STRING;
+        return valueS;
+    }
+
 
     /**
      * Gets the value of a double data. The method asserts that
@@ -113,6 +134,8 @@ public class Data {
     public void setValue(int v) { type = Type.INTEGER; value = v; }
     
 	public void setValue(double v) {type = Type.DOUBLE; value = v;}
+	
+	public void setValue(String v) {type = Type.STRING; valueS = v;}
 
     /** Copies the value from another data */
     public void setData(Data d) { type = d.type; value = d.value; }
@@ -120,7 +143,10 @@ public class Data {
     /** Returns a string representing the data in textual form. */
     public String toString() {
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
-        return Integer.toString((int)value);
+        else if(type == Type.STRING) return valueS;
+        else if(type == Type.DOUBLE) return Double.toString(value);
+        else if(type == Type.INTEGER) return Integer.toString((int)value);
+        return valueS;
     }
     
     /**

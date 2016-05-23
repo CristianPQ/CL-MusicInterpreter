@@ -91,6 +91,7 @@ instruction
         :	play
         |	assignnote          // Assignment
         | assignduration
+        | assigncompas
         | assign
         |	ite_stmt        // if-then-else
         |	while_stmt      // while statement
@@ -111,6 +112,9 @@ assignnote  :   note eq=EQUAL expr -> ^(ASSIGNNOTE[$eq,":="] note expr)
         ;
 
 assignduration: DURATION eq=EQUAL expr -> ^(ASSIGNDURATION[$eq,":="] DURATION expr)
+	;
+	
+assigncompas: COMPAS^ ID expr DP! expr DP! expr OPENC! (NOTE ','! DURATION DP!)* (NOTE ','! DURATION) CLOSEC!
 	;
 
 // if-then-else (else is optional)
@@ -180,6 +184,9 @@ play	:	PLAY^ note DURATION
 // Basic tokens
 EQUAL	: '=' ;
 NOT_EQUAL: '!=' ;
+OPENC	: '[' ;
+CLOSEC 	: ']';
+DP		: ':';
 LT	    : '<' ;
 LE	    : '<=';
 GT	    : '>';
@@ -209,6 +216,7 @@ TRUE    : 'true' ;
 FALSE   : 'false';
 NOTE    : 'n' ('do'|'re'|'mi'|'fa'|'sol'|'la'|'si');
 PLAY	: 'play';
+COMPAS	: 'compas';
 ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 
 INT 	:	'0'..'9'+ ;

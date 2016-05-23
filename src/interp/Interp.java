@@ -245,7 +245,7 @@ public class Interp {
                 //System.out.println("IN PLAY");
 
                 Data noteData = evaluateExpression(t.getChild(0));
-
+				
                 Data auxDo = new Data(Stack.getVariable("do"));
 
                 double auxNoteData = auxDo.getDoubleValue() + noteData.getDoubleValue();
@@ -254,6 +254,7 @@ public class Interp {
 
                 //System.out.println("before duration");
                 Data durationData = evaluateExpression(t.getChild(1));
+				System.out.println(durationData.getDoubleValue());
 
                 System.out.println("    NOTE");
                 System.out.println("    " + noteData.toString());
@@ -275,12 +276,58 @@ public class Interp {
                     e.printStackTrace();
                 }
                 return null;
+			
+			case AslLexer.COMPAS:
+				String nom = t.getChild(0).getText();
+				int numNotes = (evaluateExpression(t.getChild(1))).getIntegerValue();
+				int num = (evaluateExpression(t.getChild(2))).getIntegerValue();
+				int den = (evaluateExpression(t.getChild(3))).getIntegerValue();
+				String comp = "";
+				int i = 5; 
+				boolean first = true;
+					String tempNote = "";
+					if(den == 1) tempNote = "rodona";
+					if(den == 2) tempNote = "blanca";
+					if(den == 4) tempNote = "negra";
+					if(den == 8) tempNote = "corxera";
+					if(den == 16) tempNote = "semicorxera";
 
+					double compasValue = (Stack.getVariable(tempNote)).getDoubleValue();
+					compasValue *= num;
+					double acum = 0;
+					boolean wrong = false;
+					while(i <= ((numNotes * 2) + 3)){
+						String nota = (t.getChild(i)).getText();
+						acum += (Stack.getVariable(nota)).getDoubleValue();
+						if(acum > compasValue) throw new RuntimeException ("Compas is not correct composed");
+						else if(acum == compasValue){
+							wrong = false;
+							acum = 0;
+						}
+						else wrong = true;
+						i += 2;
+					}
+					if(wrong) throw new RuntimeException ("Compas is not correct composed");
+
+
+				i = 4;
+				while(i <= ((numNotes * 2) + 3)){
+					if(first){
+						comp = comp + (t.getChild(i)).getText();
+						first = false;
+					}
+					else comp = comp + ',' + (t.getChild(i)).getText();
+					i++;
+				}
+
+				value = new Data(comp);
+				
+				Stack.defineVariable(nom, value);
+				return null;
+			
             case AslLexer.ASSIGNNOTE:
 
                 Data aux = evaluateExpression(t.getChild(0));
-
-
 
                 value = evaluateExpression(t.getChild(1));
                 
@@ -337,7 +384,6 @@ public class Interp {
 				System.out.println("Corxera: " +(Stack.getVariable("corxera")).getDoubleValue());
 				System.out.println("SemiCorxera: " +(Stack.getVariable("semicorxera")).getDoubleValue());
 				System.out.println("----------------------------------------------------------------");
-				
 				
 				return null;
             // Assignment
@@ -482,6 +528,7 @@ public class Interp {
             case AslLexer.DURATION:
                 value = new Data(Stack.getVariable(t.getText()));
                 break;
+            
             // An integer literal
             case AslLexer.INT:
                 value = new Data(t.getIntValue());
@@ -494,6 +541,10 @@ public class Interp {
             case AslLexer.BOOLEAN:
                 value = new Data(t.getBooleanValue());
                 break;
+            case AslLexer.STRING:
+				value = new Data(t.getStringValue());
+				break;
+            
             // A function call. Checks that the function returns a result.
             case AslLexer.FUNCALL:
                 value = executeFunction(t.getChild(0).getText(), t.getChild(1));
