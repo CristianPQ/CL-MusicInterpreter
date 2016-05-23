@@ -273,50 +273,31 @@ public class Interp {
                 return null;
 			
 			case AslLexer.COMPAS:
+
+                int numFills = t.getChildCount();
 				String nom = t.getChild(0).getText();
-				int numNotes = (evaluateExpression(t.getChild(1))).getIntegerValue();
-				int num = (evaluateExpression(t.getChild(2))).getIntegerValue();
-				int den = (evaluateExpression(t.getChild(3))).getIntegerValue();
+				int num = (evaluateExpression(t.getChild(1))).getIntegerValue();
+				int den = (evaluateExpression(t.getChild(2))).getIntegerValue();
 				String comp = "";
-				int i = 5; 
+				String tempNote = "";
+				if(den == 1) tempNote = "rodona";
+				if(den == 2) tempNote = "blanca";
+				if(den == 4) tempNote = "negra";
+				if(den == 8) tempNote = "corxera";
+				if(den == 16) tempNote = "semicorxera";
+
+				double compasValue = (Stack.getVariable(tempNote)).getDoubleValue();
+				compasValue *= num;
 				boolean first = true;
-					String tempNote = "";
-					if(den == 1) tempNote = "rodona";
-					if(den == 2) tempNote = "blanca";
-					if(den == 4) tempNote = "negra";
-					if(den == 8) tempNote = "corxera";
-					if(den == 16) tempNote = "semicorxera";
-
-					double compasValue = (Stack.getVariable(tempNote)).getDoubleValue();
-					compasValue *= num;
-					double acum = 0;
-					boolean wrong = false;
-					while(i <= ((numNotes * 2) + 3)){
-						String nota = (t.getChild(i)).getText();
-						acum += (Stack.getVariable(nota)).getDoubleValue();
-						if(acum > compasValue) throw new RuntimeException ("Compas is not correct composed");
-						else if(acum == compasValue){
-							wrong = false;
-							acum = 0;
-						}
-						else wrong = true;
-						i += 2;
-					}
-					if(wrong) throw new RuntimeException ("Compas is not correct composed");
-
-
-				i = 4;
-				while(i <= ((numNotes * 2) + 3)){
+				for(int i = 3; (i < numFills);i++){
+						checkCompass(compasValue, t.getChild(i));	
 					if(first){
-						comp = comp + (t.getChild(i)).getText();
+						comp = comp + obtainCompasString(t.getChild(i));
 						first = false;
 					}
-					else comp = comp + ',' + (t.getChild(i)).getText();
-					i++;
+					else comp = comp + ',' + obtainCompasString(t.getChild(i));
 				}
-
 				value = new Data(comp);
-				
 				Stack.defineVariable(nom, value);
 				return null;
 			
@@ -681,6 +662,31 @@ public class Interp {
 		}
 	}
     
+    private String obtainCompasString(AslTree t){
+		String result = "";
+		int numChild = t.getChildCount();
+		for(int i = 0; i < numChild; i++){			
+			result += (t.getChild(i)).getText();
+			if((t.getChild(i)).getChildCount() > 0) result += ((t.getChild(i)).getChild(0)).getText();
+			if(i + 1 < numChild)result += ',';
+		}
+		return result; 
+	}
+   
+	private void checkCompass(double numComp, AslTree t){
+		int numChild = t.getChildCount();
+		double acum=0;
+		boolean wrong = false;
+		for(int i = 1; i < numChild; i=i+2){
+			String note = (t.getChild(i)).getText();
+			acum += (Stack.getVariable(note)).getDoubleValue();
+			if(acum > numComp)  throw new RuntimeException ("Compas is not correct composed");
+			else if (acum == numComp) wrong = false;
+			else wrong = true;
+		}		
+		if(wrong) throw new RuntimeException ("Compas is not correct composed");
+		
+	}
     
 
     /**

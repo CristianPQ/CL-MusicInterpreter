@@ -92,7 +92,7 @@ instruction
         :	play
         |	assignnote          // Assignment
         | assignduration
-  //      | assigncompas
+        | assigncompas
         | assign
         |	ite_stmt        // if-then-else
         |	while_stmt      // while statement
@@ -115,13 +115,13 @@ assignnote  :   note eq=EQUAL expr -> ^(ASSIGNNOTE[$eq,":="] note expr)
 assignduration: DURATION eq=EQUAL expr -> ^(ASSIGNDURATION[$eq,":="] DURATION expr)
 	;
 	
-//assigncompas: COMPAS^ ID expr DP! expr OPENC! (minicompas '|'!)* minicompas CLOSEC!
-//	;
+assigncompas: COMPAS^ ID expr DP! expr OPENC! minicompas ('|'! minicompas)* CLOSEC!
+	;
 	
-//minicompas: exprmus -> ^(MINICOMPAS exprmus)
-//	;
+minicompas: exprmus -> ^(MINICOMPAS exprmus)
+	;
 	
-exprmus: (note ','! DURATION DP!)* (note ','! DURATION)
+exprmus: (note ','! DURATION) (DP! note ','! DURATION)*
 	;
 
 // if-then-else (else is optional)

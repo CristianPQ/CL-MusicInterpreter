@@ -1,8 +1,8 @@
 func main()
 	ndo = 0;
 	negra = 2.3;
-	compas got 4:2:4 [ndo, negra : ndo, negra : ndo, negra : ndo,negra ];
+	
+	compas got 2:4 [ndo 1, negra : ndo 2, negra | ndo, negra : ndo,negra | ndo, negra : ndo,negra  ];
 	
 	write got;
-	write "                                    ";
 endfunc

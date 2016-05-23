@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 10:11:29
+// $ANTLR 3.4 /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 11:39:53
 
 package parser;
 
@@ -16,6 +16,7 @@ public class AslLexer extends Lexer {
     public static final int T__60=60;
     public static final int T__61=61;
     public static final int T__62=62;
+    public static final int T__63=63;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
@@ -190,6 +191,27 @@ public class AslLexer extends Lexer {
         }
     }
     // $ANTLR end "T__62"
+
+    // $ANTLR start "T__63"
+    public final void mT__63() throws RecognitionException {
+        try {
+            int _type = T__63;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:11:7: ( '|' )
+            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:11:9: '|'
+            {
+            match('|'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__63"
 
     // $ANTLR start "EQUAL"
     public final void mEQUAL() throws RecognitionException {
@@ -1689,8 +1711,8 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:8: ( T__58 | T__59 | T__60 | T__61 | T__62 | EQUAL | NOT_EQUAL | OPENC | CLOSEC | DP | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DURATION | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | PLAY | COMPAS | ID | INT | DOUBLE | COMMENT | STRING | WS )
-        int alt12=46;
+        // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:8: ( T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | EQUAL | NOT_EQUAL | OPENC | CLOSEC | DP | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DURATION | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | PLAY | COMPAS | ID | INT | DOUBLE | COMMENT | STRING | WS )
+        int alt12=47;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1734,327 +1756,335 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:40: EQUAL
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:40: T__63
+                {
+                mT__63(); 
+
+
+                }
+                break;
+            case 7 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:46: EQUAL
                 {
                 mEQUAL(); 
 
 
                 }
                 break;
-            case 7 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:46: NOT_EQUAL
+            case 8 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:52: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
 
                 }
                 break;
-            case 8 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:56: OPENC
+            case 9 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:62: OPENC
                 {
                 mOPENC(); 
 
 
                 }
                 break;
-            case 9 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:62: CLOSEC
+            case 10 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:68: CLOSEC
                 {
                 mCLOSEC(); 
 
 
                 }
                 break;
-            case 10 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:69: DP
+            case 11 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:75: DP
                 {
                 mDP(); 
 
 
                 }
                 break;
-            case 11 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:72: LT
+            case 12 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:78: LT
                 {
                 mLT(); 
 
 
                 }
                 break;
-            case 12 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:75: LE
+            case 13 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:81: LE
                 {
                 mLE(); 
 
 
                 }
                 break;
-            case 13 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:78: GT
+            case 14 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:84: GT
                 {
                 mGT(); 
 
 
                 }
                 break;
-            case 14 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:81: GE
+            case 15 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:87: GE
                 {
                 mGE(); 
 
 
                 }
                 break;
-            case 15 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:84: PLUS
+            case 16 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:90: PLUS
                 {
                 mPLUS(); 
 
 
                 }
                 break;
-            case 16 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:89: MINUS
+            case 17 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:95: MINUS
                 {
                 mMINUS(); 
 
 
                 }
                 break;
-            case 17 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:95: MUL
+            case 18 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:101: MUL
                 {
                 mMUL(); 
 
 
                 }
                 break;
-            case 18 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:99: DIV
+            case 19 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:105: DIV
                 {
                 mDIV(); 
 
 
                 }
                 break;
-            case 19 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:103: MOD
+            case 20 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:109: MOD
                 {
                 mMOD(); 
 
 
                 }
                 break;
-            case 20 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:107: NOT
+            case 21 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:113: NOT
                 {
                 mNOT(); 
 
 
                 }
                 break;
-            case 21 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:111: AND
+            case 22 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:117: AND
                 {
                 mAND(); 
 
 
                 }
                 break;
-            case 22 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:115: OR
+            case 23 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:121: OR
                 {
                 mOR(); 
 
 
                 }
                 break;
-            case 23 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:118: IF
+            case 24 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:124: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 24 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:121: THEN
+            case 25 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:127: THEN
                 {
                 mTHEN(); 
 
 
                 }
                 break;
-            case 25 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:126: ELSE
+            case 26 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:132: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 26 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:131: ENDIF
+            case 27 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:137: ENDIF
                 {
                 mENDIF(); 
 
 
                 }
                 break;
-            case 27 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:137: WHILE
+            case 28 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:143: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 28 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:143: DURATION
+            case 29 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:149: DURATION
                 {
                 mDURATION(); 
 
 
                 }
                 break;
-            case 29 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:152: DO
+            case 30 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:158: DO
                 {
                 mDO(); 
 
 
                 }
                 break;
-            case 30 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:155: ENDWHILE
+            case 31 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:161: ENDWHILE
                 {
                 mENDWHILE(); 
 
 
                 }
                 break;
-            case 31 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:164: FUNC
+            case 32 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:170: FUNC
                 {
                 mFUNC(); 
 
 
                 }
                 break;
-            case 32 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:169: ENDFUNC
+            case 33 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:175: ENDFUNC
                 {
                 mENDFUNC(); 
 
 
                 }
                 break;
-            case 33 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:177: RETURN
+            case 34 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:183: RETURN
                 {
                 mRETURN(); 
 
 
                 }
                 break;
-            case 34 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:184: READ
+            case 35 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:190: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 35 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:189: WRITE
+            case 36 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:195: WRITE
                 {
                 mWRITE(); 
 
 
                 }
                 break;
-            case 36 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:195: TRUE
+            case 37 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:201: TRUE
                 {
                 mTRUE(); 
 
 
                 }
                 break;
-            case 37 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:200: FALSE
+            case 38 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:206: FALSE
                 {
                 mFALSE(); 
 
 
                 }
                 break;
-            case 38 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:206: NOTE
+            case 39 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:212: NOTE
                 {
                 mNOTE(); 
 
 
                 }
                 break;
-            case 39 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:211: PLAY
+            case 40 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:217: PLAY
                 {
                 mPLAY(); 
 
 
                 }
                 break;
-            case 40 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:216: COMPAS
+            case 41 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:222: COMPAS
                 {
                 mCOMPAS(); 
 
 
                 }
                 break;
-            case 41 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:223: ID
+            case 42 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:229: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 42 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:226: INT
+            case 43 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:232: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 43 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:230: DOUBLE
+            case 44 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:236: DOUBLE
                 {
                 mDOUBLE(); 
 
 
                 }
                 break;
-            case 44 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:237: COMMENT
+            case 45 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:243: COMMENT
                 {
                 mCOMMENT(); 
 
 
                 }
                 break;
-            case 45 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:245: STRING
+            case 46 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:251: STRING
                 {
                 mSTRING(); 
 
 
                 }
                 break;
-            case 46 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:252: WS
+            case 47 :
+                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:258: WS
                 {
                 mWS(); 
 
@@ -2069,18 +2099,18 @@ public class AslLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\13\uffff\1\45\1\47\3\uffff\1\51\1\uffff\16\40\1\uffff\1\104\10"+
-        "\uffff\11\40\1\120\1\121\13\40\1\137\3\40\2\uffff\1\143\1\40\4\145"+
-        "\1\40\2\145\1\147\2\uffff\15\40\1\uffff\3\40\1\uffff\1\40\1\uffff"+
-        "\1\145\1\uffff\1\173\1\174\1\175\7\40\1\u0085\4\40\1\u008a\1\40"+
-        "\1\u008c\1\u008d\3\uffff\1\u008e\2\40\1\u0091\1\u0092\2\40\1\uffff"+
-        "\4\40\1\uffff\1\u0099\3\uffff\2\40\2\uffff\1\u008d\1\u009c\1\u008d"+
-        "\1\40\1\u009e\1\40\1\uffff\1\40\1\u00a1\1\uffff\1\u008d\1\uffff"+
-        "\1\40\1\u00a3\1\uffff\1\40\1\uffff\2\40\1\u008d";
+        "\14\uffff\1\46\1\50\3\uffff\1\52\1\uffff\16\41\1\uffff\1\105\10"+
+        "\uffff\11\41\1\121\1\122\13\41\1\140\3\41\2\uffff\1\144\1\41\4\146"+
+        "\1\41\2\146\1\150\2\uffff\15\41\1\uffff\3\41\1\uffff\1\41\1\uffff"+
+        "\1\146\1\uffff\1\174\1\175\1\176\7\41\1\u0086\4\41\1\u008b\1\41"+
+        "\1\u008d\1\u008e\3\uffff\1\u008f\2\41\1\u0092\1\u0093\2\41\1\uffff"+
+        "\4\41\1\uffff\1\u009a\3\uffff\2\41\2\uffff\1\u008e\1\u009d\1\u008e"+
+        "\1\41\1\u009f\1\41\1\uffff\1\41\1\u00a2\1\uffff\1\u008e\1\uffff"+
+        "\1\41\1\u00a4\1\uffff\1\41\1\uffff\2\41\1\u008e";
     static final String DFA12_eofS =
-        "\u00a7\uffff";
+        "\u00a8\uffff";
     static final String DFA12_minS =
-        "\1\11\12\uffff\2\75\3\uffff\1\52\1\uffff\1\144\1\156\1\162\1\146"+
+        "\1\11\13\uffff\2\75\3\uffff\1\52\1\uffff\1\144\1\156\1\162\1\146"+
         "\1\150\1\154\1\150\1\145\1\154\1\157\1\145\1\157\1\141\1\154\1\uffff"+
         "\1\56\10\uffff\1\164\1\147\1\157\1\145\1\151\1\141\1\151\1\141\1"+
         "\144\2\60\1\145\1\165\1\163\1\144\2\151\1\144\2\141\2\155\1\60\1"+
@@ -2093,7 +2123,7 @@ public class AslLexer extends Lexer {
         "\2\uffff\3\60\1\141\1\60\1\162\1\uffff\1\145\1\60\1\uffff\1\60\1"+
         "\uffff\1\170\1\60\1\uffff\1\145\1\uffff\1\162\1\141\1\60";
     static final String DFA12_maxS =
-        "\1\172\12\uffff\2\75\3\uffff\1\57\1\uffff\1\163\1\156\1\162\1\146"+
+        "\1\174\13\uffff\2\75\3\uffff\1\57\1\uffff\1\163\1\156\1\162\1\146"+
         "\1\162\1\156\1\162\1\157\1\154\1\157\1\145\1\157\1\165\1\154\1\uffff"+
         "\1\71\10\uffff\1\164\1\147\1\157\1\145\1\151\1\141\1\157\1\141\1"+
         "\144\2\172\1\145\1\165\1\163\1\144\2\151\1\144\1\164\1\141\1\162"+
@@ -2107,21 +2137,21 @@ public class AslLexer extends Lexer {
         "\1\172\1\uffff\1\172\1\uffff\1\170\1\172\1\uffff\1\145\1\uffff\1"+
         "\162\1\141\1\172";
     static final String DFA12_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\2\uffff\1\17"+
-        "\1\20\1\21\1\uffff\1\23\16\uffff\1\51\1\uffff\1\55\1\56\1\14\1\13"+
-        "\1\16\1\15\1\54\1\22\32\uffff\1\52\1\53\12\uffff\1\26\1\27\15\uffff"+
-        "\1\35\3\uffff\1\24\1\uffff\1\46\1\uffff\1\25\23\uffff\1\30\1\44"+
-        "\1\31\7\uffff\1\42\4\uffff\1\37\1\uffff\1\47\1\34\1\32\2\uffff\1"+
-        "\33\1\43\6\uffff\1\45\2\uffff\1\41\1\uffff\1\50\2\uffff\1\40\1\uffff"+
-        "\1\36\3\uffff";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\2\uffff"+
+        "\1\20\1\21\1\22\1\uffff\1\24\16\uffff\1\52\1\uffff\1\56\1\57\1\15"+
+        "\1\14\1\17\1\16\1\55\1\23\32\uffff\1\53\1\54\12\uffff\1\27\1\30"+
+        "\15\uffff\1\36\3\uffff\1\25\1\uffff\1\47\1\uffff\1\26\23\uffff\1"+
+        "\31\1\45\1\32\7\uffff\1\43\4\uffff\1\40\1\uffff\1\50\1\35\1\33\2"+
+        "\uffff\1\34\1\44\6\uffff\1\46\2\uffff\1\42\1\uffff\1\51\2\uffff"+
+        "\1\41\1\uffff\1\37\3\uffff";
     static final String DFA12_specialS =
-        "\u00a7\uffff}>";
+        "\u00a8\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\2\43\2\uffff\1\43\22\uffff\1\43\1\7\1\42\2\uffff\1\21\1\1\1"+
-            "\uffff\1\2\1\3\1\17\1\15\1\4\1\16\1\uffff\1\20\12\41\1\12\1"+
-            "\5\1\13\1\6\1\14\2\uffff\32\40\1\10\1\uffff\1\11\1\uffff\1\40"+
-            "\1\uffff\1\23\1\32\1\33\1\35\1\27\1\36\2\40\1\25\4\40\1\22\1"+
-            "\24\1\37\1\40\1\31\1\34\1\26\2\40\1\30\3\40",
+            "\2\44\2\uffff\1\44\22\uffff\1\44\1\10\1\43\2\uffff\1\22\1\1"+
+            "\1\uffff\1\2\1\3\1\20\1\16\1\4\1\17\1\uffff\1\21\12\42\1\13"+
+            "\1\5\1\14\1\7\1\15\2\uffff\32\41\1\11\1\uffff\1\12\1\uffff\1"+
+            "\41\1\uffff\1\24\1\33\1\34\1\36\1\30\1\37\2\41\1\26\4\41\1\23"+
+            "\1\25\1\40\1\41\1\32\1\35\1\27\2\41\1\31\3\41\1\uffff\1\6",
             "",
             "",
             "",
@@ -2132,83 +2162,83 @@ public class AslLexer extends Lexer {
             "",
             "",
             "",
-            "\1\44",
-            "\1\46",
+            "",
+            "\1\45",
+            "\1\47",
             "",
             "",
             "",
-            "\1\50\4\uffff\1\50",
+            "\1\51\4\uffff\1\51",
             "",
-            "\1\54\1\53\1\57\5\uffff\1\61\1\56\1\uffff\1\52\2\uffff\1\55"+
-            "\1\60",
-            "\1\62",
+            "\1\55\1\54\1\60\5\uffff\1\62\1\57\1\uffff\1\53\2\uffff\1\56"+
+            "\1\61",
             "\1\63",
             "\1\64",
-            "\1\65\11\uffff\1\66",
-            "\1\67\1\uffff\1\70",
-            "\1\71\11\uffff\1\72",
-            "\1\74\11\uffff\1\73",
-            "\1\75",
+            "\1\65",
+            "\1\66\11\uffff\1\67",
+            "\1\70\1\uffff\1\71",
+            "\1\72\11\uffff\1\73",
+            "\1\75\11\uffff\1\74",
             "\1\76",
             "\1\77",
             "\1\100",
-            "\1\102\23\uffff\1\101",
-            "\1\103",
+            "\1\101",
+            "\1\103\23\uffff\1\102",
+            "\1\104",
             "",
-            "\1\105\1\uffff\12\41",
-            "",
-            "",
-            "",
+            "\1\106\1\uffff\12\42",
             "",
             "",
             "",
             "",
             "",
-            "\1\106",
+            "",
+            "",
+            "",
             "\1\107",
             "\1\110",
             "\1\111",
             "\1\112",
             "\1\113",
-            "\1\115\5\uffff\1\114",
-            "\1\116",
+            "\1\114",
+            "\1\116\5\uffff\1\115",
             "\1\117",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\122",
+            "\1\120",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\123",
             "\1\124",
             "\1\125",
             "\1\126",
             "\1\127",
             "\1\130",
-            "\1\132\22\uffff\1\131",
-            "\1\133",
-            "\1\135\4\uffff\1\134",
-            "\1\136",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\140",
+            "\1\131",
+            "\1\133\22\uffff\1\132",
+            "\1\134",
+            "\1\136\4\uffff\1\135",
+            "\1\137",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\141",
             "\1\142",
+            "\1\143",
             "",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\144",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\146",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\145",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\147",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "",
-            "\1\150",
             "\1\151",
             "\1\152",
-            "\1\155\2\uffff\1\153\15\uffff\1\154",
-            "\1\156",
+            "\1\153",
+            "\1\156\2\uffff\1\154\15\uffff\1\155",
             "\1\157",
             "\1\160",
             "\1\161",
@@ -2217,78 +2247,79 @@ public class AslLexer extends Lexer {
             "\1\164",
             "\1\165",
             "\1\166",
-            "",
             "\1\167",
+            "",
             "\1\170",
             "\1\171",
-            "",
             "\1\172",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\173",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\176",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0086",
+            "\1\u0085",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u0087",
             "\1\u0088",
             "\1\u0089",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u008b",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u008a",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u008c",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u008f",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u0090",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0093",
+            "\1\u0091",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u0094",
-            "",
             "\1\u0095",
+            "",
             "\1\u0096",
             "\1\u0097",
             "\1\u0098",
+            "\1\u0099",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "",
             "",
-            "\1\u009a",
             "\1\u009b",
+            "\1\u009c",
             "",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u009d",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u009f",
-            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u009e",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00a0",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00a1",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
-            "\1\u00a2",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
-            "\1\u00a4",
+            "\1\u00a3",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "\1\u00a5",
+            "",
             "\1\u00a6",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40"
+            "\1\u00a7",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41"
     };
 
     static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
@@ -2321,7 +2352,7 @@ public class AslLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__58 | T__59 | T__60 | T__61 | T__62 | EQUAL | NOT_EQUAL | OPENC | CLOSEC | DP | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DURATION | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | PLAY | COMPAS | ID | INT | DOUBLE | COMMENT | STRING | WS );";
+            return "1:1: Tokens : ( T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | EQUAL | NOT_EQUAL | OPENC | CLOSEC | DP | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DURATION | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | PLAY | COMPAS | ID | INT | DOUBLE | COMMENT | STRING | WS );";
         }
     }
  
