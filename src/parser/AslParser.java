@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// $ANTLR 3.4 /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-22 18:11:12
-=======
-// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-22 16:32:54
->>>>>>> 9ed638aadb9125b7a5dbb22302f234f453a58317
+// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 08:48:43
 
 package parser;
 import interp.AslTree;
@@ -132,7 +128,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return AslParser.tokenNames; }
-    public String getGrammarFileName() { return "/home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "/Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -142,7 +138,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "prog"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:62:1: prog : ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:62:1: prog : ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) ;
     public final AslParser.prog_return prog() throws RecognitionException {
         AslParser.prog_return retval = new AslParser.prog_return();
         retval.start = input.LT(1);
@@ -158,10 +154,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_EOF=new RewriteRuleTokenStream(adaptor,"token EOF");
         RewriteRuleSubtreeStream stream_func=new RewriteRuleSubtreeStream(adaptor,"rule func");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:62:6: ( ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:62:8: ( func )+ EOF
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:62:6: ( ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:62:8: ( func )+ EOF
             {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:62:8: ( func )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:62:8: ( func )+
             int cnt1=0;
             loop1:
             do {
@@ -175,7 +171,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:62:8: func
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:62:8: func
             	    {
             	    pushFollow(FOLLOW_func_in_prog182);
             	    func1=func();
@@ -214,7 +210,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 62:18: -> ^( LIST_FUNCTIONS ( func )+ )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:62:21: ^( LIST_FUNCTIONS ( func )+ )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:62:21: ^( LIST_FUNCTIONS ( func )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -269,7 +265,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "func"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:66:1: func : FUNC ^ ID params block_instructions ENDFUNC !;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:66:1: func : FUNC ^ ID params block_instructions ENDFUNC !;
     public final AslParser.func_return func() throws RecognitionException {
         AslParser.func_return retval = new AslParser.func_return();
         retval.start = input.LT(1);
@@ -290,8 +286,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDFUNC7_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:66:6: ( FUNC ^ ID params block_instructions ENDFUNC !)
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:66:8: FUNC ^ ID params block_instructions ENDFUNC !
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:66:6: ( FUNC ^ ID params block_instructions ENDFUNC !)
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:66:8: FUNC ^ ID params block_instructions ENDFUNC !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -357,7 +353,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "params"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:1: params : '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:1: params : '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) ;
     public final AslParser.params_return params() throws RecognitionException {
         AslParser.params_return retval = new AslParser.params_return();
         retval.start = input.LT(1);
@@ -372,18 +368,18 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree char_literal8_tree=null;
         AslTree char_literal10_tree=null;
-        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleSubtreeStream stream_paramlist=new RewriteRuleSubtreeStream(adaptor,"rule paramlist");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:8: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:10: '(' ( paramlist )? ')'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:8: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:10: '(' ( paramlist )? ')'
             {
             char_literal8=(Token)match(input,58,FOLLOW_58_in_params252);  
             stream_58.add(char_literal8);
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:14: ( paramlist )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:14: ( paramlist )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -392,7 +388,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt2) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:14: paramlist
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:14: paramlist
                     {
                     pushFollow(FOLLOW_paramlist_in_params254);
                     paramlist9=paramlist();
@@ -424,14 +420,14 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 70:29: -> ^( PARAMS ( paramlist )? )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:32: ^( PARAMS ( paramlist )? )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:32: ^( PARAMS ( paramlist )? )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(PARAMS, "PARAMS")
                 , root_1);
 
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:70:41: ( paramlist )?
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:70:41: ( paramlist )?
                 if ( stream_paramlist.hasNext() ) {
                     adaptor.addChild(root_1, stream_paramlist.nextTree());
 
@@ -477,7 +473,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "paramlist"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:74:1: paramlist : param ( ',' ! param )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:74:1: paramlist : param ( ',' ! param )* ;
     public final AslParser.paramlist_return paramlist() throws RecognitionException {
         AslParser.paramlist_return retval = new AslParser.paramlist_return();
         retval.start = input.LT(1);
@@ -494,8 +490,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal12_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:74:10: ( param ( ',' ! param )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:74:12: param ( ',' ! param )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:74:10: ( param ( ',' ! param )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:74:12: param ( ',' ! param )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -507,7 +503,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, param11.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:74:18: ( ',' ! param )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:74:18: ( ',' ! param )*
             loop3:
             do {
                 int alt3=2;
@@ -520,7 +516,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt3) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:74:19: ',' ! param
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:74:19: ',' ! param
             	    {
             	    char_literal12=(Token)match(input,60,FOLLOW_60_in_paramlist286); 
 
@@ -571,7 +567,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "param"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:79:1: param : ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) );
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:79:1: param : ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) );
     public final AslParser.param_return param() throws RecognitionException {
         AslParser.param_return retval = new AslParser.param_return();
         retval.start = input.LT(1);
@@ -588,7 +584,7 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:79:9: ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:79:9: ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -607,7 +603,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt4) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:79:13: '&' id= ID
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:79:13: '&' id= ID
                     {
                     char_literal14=(Token)match(input,57,FOLLOW_57_in_param314);  
                     stream_57.add(char_literal14);
@@ -630,7 +626,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 79:23: -> ^( PREF[$id,$id.text] )
                     {
-                        // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:79:26: ^( PREF[$id,$id.text] )
+                        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:79:26: ^( PREF[$id,$id.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -648,7 +644,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:80:13: id= ID
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:80:13: id= ID
                     {
                     id=(Token)match(input,ID,FOLLOW_ID_in_param341);  
                     stream_ID.add(id);
@@ -667,7 +663,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 80:19: -> ^( PVALUE[$id,$id.text] )
                     {
-                        // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:80:22: ^( PVALUE[$id,$id.text] )
+                        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:80:22: ^( PVALUE[$id,$id.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -715,7 +711,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "block_instructions"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:84:1: block_instructions : instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:84:1: block_instructions : instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) ;
     public final AslParser.block_instructions_return block_instructions() throws RecognitionException {
         AslParser.block_instructions_return retval = new AslParser.block_instructions_return();
         retval.start = input.LT(1);
@@ -733,8 +729,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_61=new RewriteRuleTokenStream(adaptor,"token 61");
         RewriteRuleSubtreeStream stream_instruction=new RewriteRuleSubtreeStream(adaptor,"rule instruction");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:85:9: ( instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:85:12: instruction ( ';' instruction )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:85:9: ( instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:85:12: instruction ( ';' instruction )*
             {
             pushFollow(FOLLOW_instruction_in_block_instructions375);
             instruction15=instruction();
@@ -743,7 +739,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             stream_instruction.add(instruction15.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:85:24: ( ';' instruction )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:85:24: ( ';' instruction )*
             loop5:
             do {
                 int alt5=2;
@@ -756,7 +752,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:85:25: ';' instruction
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:85:25: ';' instruction
             	    {
             	    char_literal16=(Token)match(input,61,FOLLOW_61_in_block_instructions378);  
             	    stream_61.add(char_literal16);
@@ -791,7 +787,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 86:13: -> ^( LIST_INSTR ( instruction )+ )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:86:16: ^( LIST_INSTR ( instruction )+ )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:86:16: ^( LIST_INSTR ( instruction )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -846,7 +842,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instruction"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:90:1: instruction : ( play | assignnote | assignduration | assigncompas | assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |);
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:90:1: instruction : ( play | assignnote | assignduration | assigncompas | assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |);
     public final AslParser.instruction_return instruction() throws RecognitionException {
         AslParser.instruction_return retval = new AslParser.instruction_return();
         retval.start = input.LT(1);
@@ -879,7 +875,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:91:9: ( play | assignnote | assignduration | assigncompas | assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |)
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:91:9: ( play | assignnote | assignduration | assigncompas | assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |)
             int alt6=12;
             switch ( input.LA(1) ) {
             case PLAY:
@@ -965,7 +961,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt6) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:91:11: play
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:91:11: play
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -980,7 +976,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:92:11: assignnote
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:92:11: assignnote
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -995,7 +991,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:93:11: assignduration
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:93:11: assignduration
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1010,7 +1006,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:94:11: assigncompas
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:94:11: assigncompas
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1025,7 +1021,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:95:11: assign
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:95:11: assign
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1040,7 +1036,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:96:11: ite_stmt
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:96:11: ite_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1055,7 +1051,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:97:11: while_stmt
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:97:11: while_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1070,7 +1066,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:98:13: funcall
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:98:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1085,7 +1081,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 9 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:99:11: return_stmt
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:99:11: return_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1100,7 +1096,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 10 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:100:11: read
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:100:11: read
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1115,7 +1111,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 11 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:101:12: write
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:101:12: write
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1130,7 +1126,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 12 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:103:9: 
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:103:9: 
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1168,7 +1164,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "assign"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:108:1: assign : ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:108:1: assign : ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) ;
     public final AslParser.assign_return assign() throws RecognitionException {
         AslParser.assign_return retval = new AslParser.assign_return();
         retval.start = input.LT(1);
@@ -1183,12 +1179,12 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree eq_tree=null;
         AslTree ID29_tree=null;
-        RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_EQUAL=new RewriteRuleTokenStream(adaptor,"token EQUAL");
+        RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:108:8: ( ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:108:10: ID eq= EQUAL expr
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:108:8: ( ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:108:10: ID eq= EQUAL expr
             {
             ID29=(Token)match(input,ID,FOLLOW_ID_in_assign662);  
             stream_ID.add(ID29);
@@ -1206,7 +1202,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_expr.add(expr30.getTree());
 
             // AST REWRITE
-            // elements: expr, ID
+            // elements: ID, expr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1218,7 +1214,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 108:27: -> ^( ASSIGN[$eq,\":=\"] ID expr )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:108:30: ^( ASSIGN[$eq,\":=\"] ID expr )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:108:30: ^( ASSIGN[$eq,\":=\"] ID expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -1270,7 +1266,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "assignnote"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:111:1: assignnote : note eq= EQUAL expr -> ^( ASSIGNNOTE[$eq,\":=\"] note expr ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:111:1: assignnote : note eq= EQUAL expr -> ^( ASSIGNNOTE[$eq,\":=\"] note expr ) ;
     public final AslParser.assignnote_return assignnote() throws RecognitionException {
         AslParser.assignnote_return retval = new AslParser.assignnote_return();
         retval.start = input.LT(1);
@@ -1286,11 +1282,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree eq_tree=null;
         RewriteRuleTokenStream stream_EQUAL=new RewriteRuleTokenStream(adaptor,"token EQUAL");
-        RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         RewriteRuleSubtreeStream stream_note=new RewriteRuleSubtreeStream(adaptor,"rule note");
+        RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:111:13: ( note eq= EQUAL expr -> ^( ASSIGNNOTE[$eq,\":=\"] note expr ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:111:17: note eq= EQUAL expr
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:111:13: ( note eq= EQUAL expr -> ^( ASSIGNNOTE[$eq,\":=\"] note expr ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:111:17: note eq= EQUAL expr
             {
             pushFollow(FOLLOW_note_in_assignnote699);
             note31=note();
@@ -1323,7 +1319,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 111:36: -> ^( ASSIGNNOTE[$eq,\":=\"] note expr )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:111:39: ^( ASSIGNNOTE[$eq,\":=\"] note expr )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:111:39: ^( ASSIGNNOTE[$eq,\":=\"] note expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -1373,7 +1369,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "assignduration"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:114:1: assignduration : DURATION eq= EQUAL expr -> ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:114:1: assignduration : DURATION eq= EQUAL expr -> ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr ) ;
     public final AslParser.assignduration_return assignduration() throws RecognitionException {
         AslParser.assignduration_return retval = new AslParser.assignduration_return();
         retval.start = input.LT(1);
@@ -1388,12 +1384,12 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree eq_tree=null;
         AslTree DURATION33_tree=null;
-        RewriteRuleTokenStream stream_DURATION=new RewriteRuleTokenStream(adaptor,"token DURATION");
         RewriteRuleTokenStream stream_EQUAL=new RewriteRuleTokenStream(adaptor,"token EQUAL");
+        RewriteRuleTokenStream stream_DURATION=new RewriteRuleTokenStream(adaptor,"token DURATION");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:114:15: ( DURATION eq= EQUAL expr -> ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:114:17: DURATION eq= EQUAL expr
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:114:15: ( DURATION eq= EQUAL expr -> ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:114:17: DURATION eq= EQUAL expr
             {
             DURATION33=(Token)match(input,DURATION,FOLLOW_DURATION_in_assignduration732);  
             stream_DURATION.add(DURATION33);
@@ -1411,7 +1407,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_expr.add(expr34.getTree());
 
             // AST REWRITE
-            // elements: DURATION, expr
+            // elements: expr, DURATION
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1423,7 +1419,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 114:40: -> ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:114:43: ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:114:43: ^( ASSIGNDURATION[$eq,\":=\"] DURATION expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -1475,7 +1471,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "assigncompas"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:1: assigncompas : COMPAS ^ ID expr DP ! expr DP ! expr OPENC ! ( NOTE ',' ! DURATION DP !)* ( NOTE ',' ! DURATION ) CLOSEC !;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:1: assigncompas : COMPAS ^ ID expr DP ! expr DP ! expr OPENC ! ( NOTE ',' ! DURATION DP !)* ( NOTE ',' ! DURATION ) CLOSEC !;
     public final AslParser.assigncompas_return assigncompas() throws RecognitionException {
         AslParser.assigncompas_return retval = new AslParser.assigncompas_return();
         retval.start = input.LT(1);
@@ -1518,8 +1514,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree CLOSEC50_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:13: ( COMPAS ^ ID expr DP ! expr DP ! expr OPENC ! ( NOTE ',' ! DURATION DP !)* ( NOTE ',' ! DURATION ) CLOSEC !)
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:15: COMPAS ^ ID expr DP ! expr DP ! expr OPENC ! ( NOTE ',' ! DURATION DP !)* ( NOTE ',' ! DURATION ) CLOSEC !
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:13: ( COMPAS ^ ID expr DP ! expr DP ! expr OPENC ! ( NOTE ',' ! DURATION DP !)* ( NOTE ',' ! DURATION ) CLOSEC !)
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:15: COMPAS ^ ID expr DP ! expr DP ! expr OPENC ! ( NOTE ',' ! DURATION DP !)* ( NOTE ',' ! DURATION ) CLOSEC !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1565,7 +1561,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             OPENC42=(Token)match(input,OPENC,FOLLOW_OPENC_in_assigncompas776); 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:56: ( NOTE ',' ! DURATION DP !)*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:56: ( NOTE ',' ! DURATION DP !)*
             loop7:
             do {
                 int alt7=2;
@@ -1596,7 +1592,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt7) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:57: NOTE ',' ! DURATION DP !
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:57: NOTE ',' ! DURATION DP !
             	    {
             	    NOTE43=(Token)match(input,NOTE,FOLLOW_NOTE_in_assigncompas780); 
             	    NOTE43_tree = 
@@ -1625,8 +1621,8 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:82: ( NOTE ',' ! DURATION )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:117:83: NOTE ',' ! DURATION
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:82: ( NOTE ',' ! DURATION )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:117:83: NOTE ',' ! DURATION
             {
             NOTE47=(Token)match(input,NOTE,FOLLOW_NOTE_in_assigncompas793); 
             NOTE47_tree = 
@@ -1680,7 +1676,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "ite_stmt"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:121:1: ite_stmt : IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:121:1: ite_stmt : IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !;
     public final AslParser.ite_stmt_return ite_stmt() throws RecognitionException {
         AslParser.ite_stmt_return retval = new AslParser.ite_stmt_return();
         retval.start = input.LT(1);
@@ -1705,8 +1701,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDIF57_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:121:10: ( IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !)
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:121:12: IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:121:10: ( IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !)
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:121:12: IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1734,7 +1730,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, block_instructions54.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:121:46: ( ELSE ! block_instructions )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:121:46: ( ELSE ! block_instructions )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1743,7 +1739,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt8) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:121:47: ELSE ! block_instructions
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:121:47: ELSE ! block_instructions
                     {
                     ELSE55=(Token)match(input,ELSE,FOLLOW_ELSE_in_ite_stmt824); 
 
@@ -1793,7 +1789,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "while_stmt"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:125:1: while_stmt : WHILE ^ expr DO ! block_instructions ENDWHILE !;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:125:1: while_stmt : WHILE ^ expr DO ! block_instructions ENDWHILE !;
     public final AslParser.while_stmt_return while_stmt() throws RecognitionException {
         AslParser.while_stmt_return retval = new AslParser.while_stmt_return();
         retval.start = input.LT(1);
@@ -1814,8 +1810,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDWHILE62_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:125:12: ( WHILE ^ expr DO ! block_instructions ENDWHILE !)
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:125:14: WHILE ^ expr DO ! block_instructions ENDWHILE !
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:125:12: ( WHILE ^ expr DO ! block_instructions ENDWHILE !)
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:125:14: WHILE ^ expr DO ! block_instructions ENDWHILE !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1876,7 +1872,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "return_stmt"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:129:1: return_stmt : RETURN ^ ( expr )? ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:129:1: return_stmt : RETURN ^ ( expr )? ;
     public final AslParser.return_stmt_return return_stmt() throws RecognitionException {
         AslParser.return_stmt_return retval = new AslParser.return_stmt_return();
         retval.start = input.LT(1);
@@ -1891,8 +1887,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree RETURN63_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:129:13: ( RETURN ^ ( expr )? )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:129:15: RETURN ^ ( expr )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:129:13: ( RETURN ^ ( expr )? )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:129:15: RETURN ^ ( expr )?
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1904,7 +1900,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(RETURN63_tree, root_0);
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:129:23: ( expr )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:129:23: ( expr )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1913,7 +1909,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt9) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:129:23: expr
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:129:23: expr
                     {
                     pushFollow(FOLLOW_expr_in_return_stmt890);
                     expr64=expr();
@@ -1959,7 +1955,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "read"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:133:1: read : READ ^ ID ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:133:1: read : READ ^ ID ;
     public final AslParser.read_return read() throws RecognitionException {
         AslParser.read_return retval = new AslParser.read_return();
         retval.start = input.LT(1);
@@ -1974,8 +1970,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ID66_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:133:6: ( READ ^ ID )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:133:8: READ ^ ID
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:133:6: ( READ ^ ID )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:133:8: READ ^ ID
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2025,7 +2021,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "write"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:137:1: write : WRITE ^ ( expr | STRING ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:137:1: write : WRITE ^ ( expr | STRING ) ;
     public final AslParser.write_return write() throws RecognitionException {
         AslParser.write_return retval = new AslParser.write_return();
         retval.start = input.LT(1);
@@ -2042,8 +2038,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree STRING69_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:137:7: ( WRITE ^ ( expr | STRING ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:137:11: WRITE ^ ( expr | STRING )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:137:7: ( WRITE ^ ( expr | STRING ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:137:11: WRITE ^ ( expr | STRING )
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2055,7 +2051,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(WRITE67_tree, root_0);
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:137:18: ( expr | STRING )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:137:18: ( expr | STRING )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2074,7 +2070,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt10) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:137:19: expr
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:137:19: expr
                     {
                     pushFollow(FOLLOW_expr_in_write936);
                     expr68=expr();
@@ -2086,7 +2082,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:137:26: STRING
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:137:26: STRING
                     {
                     STRING69=(Token)match(input,STRING,FOLLOW_STRING_in_write940); 
                     STRING69_tree = 
@@ -2132,7 +2128,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:141:1: expr : boolterm ( OR ^ boolterm )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:141:1: expr : boolterm ( OR ^ boolterm )* ;
     public final AslParser.expr_return expr() throws RecognitionException {
         AslParser.expr_return retval = new AslParser.expr_return();
         retval.start = input.LT(1);
@@ -2149,8 +2145,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree OR71_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:141:9: ( boolterm ( OR ^ boolterm )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:141:13: boolterm ( OR ^ boolterm )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:141:9: ( boolterm ( OR ^ boolterm )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:141:13: boolterm ( OR ^ boolterm )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2162,7 +2158,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, boolterm70.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:141:22: ( OR ^ boolterm )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:141:22: ( OR ^ boolterm )*
             loop11:
             do {
                 int alt11=2;
@@ -2175,7 +2171,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt11) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:141:23: OR ^ boolterm
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:141:23: OR ^ boolterm
             	    {
             	    OR71=(Token)match(input,OR,FOLLOW_OR_in_expr968); 
             	    OR71_tree = 
@@ -2231,7 +2227,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "boolterm"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:144:1: boolterm : boolfact ( AND ^ boolfact )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:144:1: boolterm : boolfact ( AND ^ boolfact )* ;
     public final AslParser.boolterm_return boolterm() throws RecognitionException {
         AslParser.boolterm_return retval = new AslParser.boolterm_return();
         retval.start = input.LT(1);
@@ -2248,8 +2244,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree AND74_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:144:9: ( boolfact ( AND ^ boolfact )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:144:13: boolfact ( AND ^ boolfact )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:144:9: ( boolfact ( AND ^ boolfact )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:144:13: boolfact ( AND ^ boolfact )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2261,7 +2257,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, boolfact73.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:144:22: ( AND ^ boolfact )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:144:22: ( AND ^ boolfact )*
             loop12:
             do {
                 int alt12=2;
@@ -2274,7 +2270,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt12) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:144:23: AND ^ boolfact
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:144:23: AND ^ boolfact
             	    {
             	    AND74=(Token)match(input,AND,FOLLOW_AND_in_boolterm994); 
             	    AND74_tree = 
@@ -2330,7 +2326,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "boolfact"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:1: boolfact : num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:1: boolfact : num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? ;
     public final AslParser.boolfact_return boolfact() throws RecognitionException {
         AslParser.boolfact_return retval = new AslParser.boolfact_return();
         retval.start = input.LT(1);
@@ -2357,8 +2353,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree GE82_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:9: ( num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:13: num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:9: ( num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:13: num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2370,7 +2366,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, num_expr76.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:22: ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:22: ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -2379,9 +2375,9 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt14) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr
                     {
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^)
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^)
                     int alt13=6;
                     switch ( input.LA(1) ) {
                     case EQUAL:
@@ -2424,7 +2420,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt13) {
                         case 1 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:24: EQUAL ^
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:24: EQUAL ^
                             {
                             EQUAL77=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_boolfact1021); 
                             EQUAL77_tree = 
@@ -2436,7 +2432,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 2 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:33: NOT_EQUAL ^
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:33: NOT_EQUAL ^
                             {
                             NOT_EQUAL78=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_boolfact1026); 
                             NOT_EQUAL78_tree = 
@@ -2448,7 +2444,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 3 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:46: LT ^
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:46: LT ^
                             {
                             LT79=(Token)match(input,LT,FOLLOW_LT_in_boolfact1031); 
                             LT79_tree = 
@@ -2460,7 +2456,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 4 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:52: LE ^
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:52: LE ^
                             {
                             LE80=(Token)match(input,LE,FOLLOW_LE_in_boolfact1036); 
                             LE80_tree = 
@@ -2472,7 +2468,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 5 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:58: GT ^
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:58: GT ^
                             {
                             GT81=(Token)match(input,GT,FOLLOW_GT_in_boolfact1041); 
                             GT81_tree = 
@@ -2484,7 +2480,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 6 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:147:64: GE ^
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:147:64: GE ^
                             {
                             GE82=(Token)match(input,GE,FOLLOW_GE_in_boolfact1046); 
                             GE82_tree = 
@@ -2543,7 +2539,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "num_expr"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:1: num_expr : term ( ( PLUS ^| MINUS ^) term )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:1: num_expr : term ( ( PLUS ^| MINUS ^) term )* ;
     public final AslParser.num_expr_return num_expr() throws RecognitionException {
         AslParser.num_expr_return retval = new AslParser.num_expr_return();
         retval.start = input.LT(1);
@@ -2562,8 +2558,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MINUS86_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:9: ( term ( ( PLUS ^| MINUS ^) term )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:13: term ( ( PLUS ^| MINUS ^) term )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:9: ( term ( ( PLUS ^| MINUS ^) term )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:13: term ( ( PLUS ^| MINUS ^) term )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2575,7 +2571,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, term84.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:18: ( ( PLUS ^| MINUS ^) term )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:18: ( ( PLUS ^| MINUS ^) term )*
             loop16:
             do {
                 int alt16=2;
@@ -2588,9 +2584,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt16) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:20: ( PLUS ^| MINUS ^) term
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:20: ( PLUS ^| MINUS ^) term
             	    {
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:20: ( PLUS ^| MINUS ^)
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:20: ( PLUS ^| MINUS ^)
             	    int alt15=2;
             	    int LA15_0 = input.LA(1);
 
@@ -2609,7 +2605,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    switch (alt15) {
             	        case 1 :
-            	            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:21: PLUS ^
+            	            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:21: PLUS ^
             	            {
             	            PLUS85=(Token)match(input,PLUS,FOLLOW_PLUS_in_num_expr1075); 
             	            PLUS85_tree = 
@@ -2621,7 +2617,7 @@ public TreeAdaptor getTreeAdaptor() {
             	            }
             	            break;
             	        case 2 :
-            	            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:150:29: MINUS ^
+            	            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:150:29: MINUS ^
             	            {
             	            MINUS86=(Token)match(input,MINUS,FOLLOW_MINUS_in_num_expr1080); 
             	            MINUS86_tree = 
@@ -2683,7 +2679,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "term"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:1: term : factor ( ( MUL ^| DIV ^| MOD ^) factor )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:1: term : factor ( ( MUL ^| DIV ^| MOD ^) factor )* ;
     public final AslParser.term_return term() throws RecognitionException {
         AslParser.term_return retval = new AslParser.term_return();
         retval.start = input.LT(1);
@@ -2704,8 +2700,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MOD91_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:9: ( factor ( ( MUL ^| DIV ^| MOD ^) factor )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:13: factor ( ( MUL ^| DIV ^| MOD ^) factor )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:9: ( factor ( ( MUL ^| DIV ^| MOD ^) factor )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:13: factor ( ( MUL ^| DIV ^| MOD ^) factor )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2717,7 +2713,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, factor88.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:20: ( ( MUL ^| DIV ^| MOD ^) factor )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:20: ( ( MUL ^| DIV ^| MOD ^) factor )*
             loop18:
             do {
                 int alt18=2;
@@ -2730,9 +2726,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt18) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:22: ( MUL ^| DIV ^| MOD ^) factor
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:22: ( MUL ^| DIV ^| MOD ^) factor
             	    {
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:22: ( MUL ^| DIV ^| MOD ^)
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:22: ( MUL ^| DIV ^| MOD ^)
             	    int alt17=3;
             	    switch ( input.LA(1) ) {
             	    case MUL:
@@ -2760,7 +2756,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             	    switch (alt17) {
             	        case 1 :
-            	            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:23: MUL ^
+            	            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:23: MUL ^
             	            {
             	            MUL89=(Token)match(input,MUL,FOLLOW_MUL_in_term1113); 
             	            MUL89_tree = 
@@ -2772,7 +2768,7 @@ public TreeAdaptor getTreeAdaptor() {
             	            }
             	            break;
             	        case 2 :
-            	            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:30: DIV ^
+            	            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:30: DIV ^
             	            {
             	            DIV90=(Token)match(input,DIV,FOLLOW_DIV_in_term1118); 
             	            DIV90_tree = 
@@ -2784,7 +2780,7 @@ public TreeAdaptor getTreeAdaptor() {
             	            }
             	            break;
             	        case 3 :
-            	            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:153:37: MOD ^
+            	            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:153:37: MOD ^
             	            {
             	            MOD91=(Token)match(input,MOD,FOLLOW_MOD_in_term1123); 
             	            MOD91_tree = 
@@ -2846,7 +2842,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "factor"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
     public final AslParser.factor_return factor() throws RecognitionException {
         AslParser.factor_return retval = new AslParser.factor_return();
         retval.start = input.LT(1);
@@ -2865,13 +2861,13 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MINUS95_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:13: ( NOT ^| PLUS ^| MINUS ^)? atom
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:13: ( NOT ^| PLUS ^| MINUS ^)? atom
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:13: ( NOT ^| PLUS ^| MINUS ^)?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:13: ( NOT ^| PLUS ^| MINUS ^)?
             int alt19=4;
             switch ( input.LA(1) ) {
                 case NOT:
@@ -2893,7 +2889,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt19) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:14: NOT ^
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:14: NOT ^
                     {
                     NOT93=(Token)match(input,NOT,FOLLOW_NOT_in_factor1150); 
                     NOT93_tree = 
@@ -2905,7 +2901,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:21: PLUS ^
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:21: PLUS ^
                     {
                     PLUS94=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor1155); 
                     PLUS94_tree = 
@@ -2917,7 +2913,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:156:29: MINUS ^
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:156:29: MINUS ^
                     {
                     MINUS95=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1160); 
                     MINUS95_tree = 
@@ -2970,7 +2966,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:163:1: atom : ( DURATION | ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:1: atom : ( DURATION | ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
     public final AslParser.atom_return atom() throws RecognitionException {
         AslParser.atom_return retval = new AslParser.atom_return();
         retval.start = input.LT(1);
@@ -2997,11 +2993,11 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree DOUBLE100_tree=null;
         AslTree char_literal102_tree=null;
         AslTree char_literal104_tree=null;
-        RewriteRuleTokenStream stream_FALSE=new RewriteRuleTokenStream(adaptor,"token FALSE");
         RewriteRuleTokenStream stream_TRUE=new RewriteRuleTokenStream(adaptor,"token TRUE");
+        RewriteRuleTokenStream stream_FALSE=new RewriteRuleTokenStream(adaptor,"token FALSE");
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:163:9: ( DURATION | ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:9: ( DURATION | ID | INT | DOUBLE | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
             int alt21=7;
             switch ( input.LA(1) ) {
             case DURATION:
@@ -3059,7 +3055,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt21) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:163:12: DURATION
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:163:12: DURATION
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3074,7 +3070,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:164:7: ID
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:164:7: ID
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3089,7 +3085,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:165:13: INT
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:165:13: INT
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3104,7 +3100,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:166:13: DOUBLE
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:166:13: DOUBLE
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3119,9 +3115,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:167:13: (b= TRUE |b= FALSE )
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:13: (b= TRUE |b= FALSE )
                     {
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:167:13: (b= TRUE |b= FALSE )
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:13: (b= TRUE |b= FALSE )
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
@@ -3140,7 +3136,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt20) {
                         case 1 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:167:14: b= TRUE
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:14: b= TRUE
                             {
                             b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom1244);  
                             stream_TRUE.add(b);
@@ -3149,7 +3145,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 2 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:167:23: b= FALSE
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:23: b= FALSE
                             {
                             b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom1250);  
                             stream_FALSE.add(b);
@@ -3174,7 +3170,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 167:33: -> ^( BOOLEAN[$b,$b.text] )
                     {
-                        // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:167:36: ^( BOOLEAN[$b,$b.text] )
+                        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:167:36: ^( BOOLEAN[$b,$b.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -3192,7 +3188,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:168:13: funcall
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:168:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3207,7 +3203,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:169:13: '(' ! expr ')' !
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:169:13: '(' ! expr ')' !
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3256,7 +3252,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "funcall"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
     public final AslParser.funcall_return funcall() throws RecognitionException {
         AslParser.funcall_return retval = new AslParser.funcall_return();
         retval.start = input.LT(1);
@@ -3273,13 +3269,13 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ID105_tree=null;
         AslTree char_literal106_tree=null;
         AslTree char_literal108_tree=null;
-        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_expr_list=new RewriteRuleSubtreeStream(adaptor,"rule expr_list");
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:13: ID '(' ( expr_list )? ')'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:13: ID '(' ( expr_list )? ')'
             {
             ID105=(Token)match(input,ID,FOLLOW_ID_in_funcall1313);  
             stream_ID.add(ID105);
@@ -3289,7 +3285,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_58.add(char_literal106);
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:20: ( expr_list )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:20: ( expr_list )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -3298,7 +3294,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt22) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:20: expr_list
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:20: expr_list
                     {
                     pushFollow(FOLLOW_expr_list_in_funcall1317);
                     expr_list107=expr_list();
@@ -3318,7 +3314,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: expr_list, ID
+            // elements: ID, expr_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3330,7 +3326,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 173:35: -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
             {
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3341,14 +3337,14 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_ID.nextNode()
                 );
 
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:51: ^( ARGLIST ( expr_list )? )
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:51: ^( ARGLIST ( expr_list )? )
                 {
                 AslTree root_2 = (AslTree)adaptor.nil();
                 root_2 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(ARGLIST, "ARGLIST")
                 , root_2);
 
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:173:61: ( expr_list )?
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:173:61: ( expr_list )?
                 if ( stream_expr_list.hasNext() ) {
                     adaptor.addChild(root_2, stream_expr_list.nextTree());
 
@@ -3397,7 +3393,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr_list"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:177:1: expr_list : expr ( ',' ! expr )* ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:1: expr_list : expr ( ',' ! expr )* ;
     public final AslParser.expr_list_return expr_list() throws RecognitionException {
         AslParser.expr_list_return retval = new AslParser.expr_list_return();
         retval.start = input.LT(1);
@@ -3414,8 +3410,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal110_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:177:10: ( expr ( ',' ! expr )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:177:13: expr ( ',' ! expr )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:10: ( expr ( ',' ! expr )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:13: expr ( ',' ! expr )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3427,7 +3423,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, expr109.getTree());
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:177:18: ( ',' ! expr )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:18: ( ',' ! expr )*
             loop23:
             do {
                 int alt23=2;
@@ -3440,7 +3436,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt23) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:177:19: ',' ! expr
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:177:19: ',' ! expr
             	    {
             	    char_literal110=(Token)match(input,60,FOLLOW_60_in_expr_list1356); 
 
@@ -3491,7 +3487,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "note"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:179:1: note : NOTE ^ ( INT )? ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:1: note : NOTE ^ ( INT )? ;
     public final AslParser.note_return note() throws RecognitionException {
         AslParser.note_return retval = new AslParser.note_return();
         retval.start = input.LT(1);
@@ -3506,8 +3502,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree INT113_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:179:6: ( NOTE ^ ( INT )? )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:179:8: NOTE ^ ( INT )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:6: ( NOTE ^ ( INT )? )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:8: NOTE ^ ( INT )?
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3519,7 +3515,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(NOTE112_tree, root_0);
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:179:14: ( INT )?
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:14: ( INT )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -3528,7 +3524,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt24) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:179:15: INT
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:179:15: INT
                     {
                     INT113=(Token)match(input,INT,FOLLOW_INT_in_note1381); 
                     INT113_tree = 
@@ -3574,7 +3570,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "play"
-    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:181:1: play : PLAY ^ note DURATION ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:1: play : PLAY ^ note DURATION ;
     public final AslParser.play_return play() throws RecognitionException {
         AslParser.play_return retval = new AslParser.play_return();
         retval.start = input.LT(1);
@@ -3591,8 +3587,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree DURATION116_tree=null;
 
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:181:6: ( PLAY ^ note DURATION )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:181:8: PLAY ^ note DURATION
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:6: ( PLAY ^ note DURATION )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:8: PLAY ^ note DURATION
             {
             root_0 = (AslTree)adaptor.nil();
 

@@ -57,11 +57,3 @@ Cristian Miguel Pinto Quinto
 
 - others: Compass
 
-
-
-
-
-IMPORTANTE:
-
-de mi a fa hay medio
-de si a do hay medio

@@ -503,16 +503,16 @@ public class Interp {
                         auxFinalValue = auxFinalValue +2;
                         break;
                     case "fa":
-                        auxFinalValue = auxFinalValue +3;
+                        auxFinalValue = auxFinalValue +2.5;
                         break;
                     case "sol":
-                        auxFinalValue = auxFinalValue +4;
+                        auxFinalValue = auxFinalValue +3.5;
                         break;
                     case "la":
-                        auxFinalValue = auxFinalValue +5;
+                        auxFinalValue = auxFinalValue +4.5;
                         break;
                     case "si":
-                        auxFinalValue = auxFinalValue +6;
+                        auxFinalValue = auxFinalValue +5.5;
                         break;
                     default:
                         break;
@@ -520,7 +520,7 @@ public class Interp {
 
                 
 
-                auxFinalValue = auxFinalValue + (7*aux);
+                auxFinalValue = auxFinalValue + (6*aux);
 
                 value = new Data(auxFinalValue);
                 //System.out.println(value.getDoubleValue());
