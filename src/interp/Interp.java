@@ -373,12 +373,12 @@ public class Interp {
 				Stack.defineVariable ("corxera", tempc);
 				Stack.defineVariable ("semicorxera", tempsc);
 				
-				System.out.println("Rodona: " + (Stack.getVariable("rodona")).getDoubleValue());
-				System.out.println("Blanca: " +(Stack.getVariable("blanca")).getDoubleValue());
-				System.out.println("Negra: " +(Stack.getVariable("negra")).getDoubleValue());
-				System.out.println("Corxera: " +(Stack.getVariable("corxera")).getDoubleValue());
-				System.out.println("SemiCorxera: " +(Stack.getVariable("semicorxera")).getDoubleValue());
-				System.out.println("----------------------------------------------------------------");
+				//System.out.println("Rodona: " + (Stack.getVariable("rodona")).getDoubleValue());
+				//System.out.println("Blanca: " +(Stack.getVariable("blanca")).getDoubleValue());
+				//System.out.println("Negra: " +(Stack.getVariable("negra")).getDoubleValue());
+				//System.out.println("Corxera: " +(Stack.getVariable("corxera")).getDoubleValue());
+				//System.out.println("SemiCorxera: " +(Stack.getVariable("semicorxera")).getDoubleValue());
+				//System.out.println("----------------------------------------------------------------");
 				
 				return null;
             // Assignment
