@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // $ANTLR 3.4 /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 08:47:40
+=======
+// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 08:48:43
+>>>>>>> 2e2cd8ef935ff2cb39cf7341135d3d479656266e
 
 package parser;
 
@@ -83,15 +87,15 @@ public class AslLexer extends Lexer {
     public AslLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "/Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g"; }
 
     // $ANTLR start "T__57"
     public final void mT__57() throws RecognitionException {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:6:7: ( '&' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:6:9: '&'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:6:7: ( '&' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:6:9: '&'
             {
             match('&'); 
 
@@ -111,8 +115,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:7:7: ( '(' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:7:9: '('
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:7:7: ( '(' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:7:9: '('
             {
             match('('); 
 
@@ -132,8 +136,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:8:7: ( ')' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:8:9: ')'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:8:7: ( ')' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:8:9: ')'
             {
             match(')'); 
 
@@ -153,8 +157,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:9:7: ( ',' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:9:9: ','
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:9:7: ( ',' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:9:9: ','
             {
             match(','); 
 
@@ -174,8 +178,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:10:7: ( ';' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:10:9: ';'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:10:7: ( ';' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:10:9: ';'
             {
             match(';'); 
 
@@ -195,8 +199,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:185:7: ( '=' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:185:9: '='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:185:7: ( '=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:185:9: '='
             {
             match('='); 
 
@@ -216,8 +220,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:186:10: ( '!=' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:186:12: '!='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:186:10: ( '!=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:186:12: '!='
             {
             match("!="); 
 
@@ -239,8 +243,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OPENC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:187:7: ( '[' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:187:9: '['
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:187:7: ( '[' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:187:9: '['
             {
             match('['); 
 
@@ -260,8 +264,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = CLOSEC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:188:9: ( ']' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:188:11: ']'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:188:9: ( ']' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:188:11: ']'
             {
             match(']'); 
 
@@ -281,8 +285,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:189:5: ( ':' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:189:7: ':'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:189:5: ( ':' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:189:7: ':'
             {
             match(':'); 
 
@@ -302,8 +306,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:190:8: ( '<' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:190:10: '<'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:8: ( '<' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:190:10: '<'
             {
             match('<'); 
 
@@ -323,8 +327,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:191:8: ( '<=' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:191:10: '<='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:8: ( '<=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:191:10: '<='
             {
             match("<="); 
 
@@ -346,8 +350,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:192:8: ( '>' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:192:10: '>'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:8: ( '>' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:192:10: '>'
             {
             match('>'); 
 
@@ -367,8 +371,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:193:8: ( '>=' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:193:10: '>='
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:193:8: ( '>=' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:193:10: '>='
             {
             match(">="); 
 
@@ -390,8 +394,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:194:6: ( '+' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:194:8: '+'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:194:6: ( '+' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:194:8: '+'
             {
             match('+'); 
 
@@ -411,8 +415,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:195:7: ( '-' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:195:9: '-'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:7: ( '-' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:195:9: '-'
             {
             match('-'); 
 
@@ -432,8 +436,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:196:9: ( '*' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:196:11: '*'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:9: ( '*' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:196:11: '*'
             {
             match('*'); 
 
@@ -453,8 +457,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:197:9: ( '/' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:197:11: '/'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:197:9: ( '/' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:197:11: '/'
             {
             match('/'); 
 
@@ -474,8 +478,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:198:9: ( '%' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:198:11: '%'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:198:9: ( '%' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:198:11: '%'
             {
             match('%'); 
 
@@ -495,8 +499,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:199:9: ( 'not' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:199:11: 'not'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:199:9: ( 'not' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:199:11: 'not'
             {
             match("not"); 
 
@@ -518,8 +522,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:200:9: ( 'and' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:200:11: 'and'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:9: ( 'and' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:200:11: 'and'
             {
             match("and"); 
 
@@ -541,8 +545,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:201:8: ( 'or' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:201:10: 'or'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:201:8: ( 'or' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:201:10: 'or'
             {
             match("or"); 
 
@@ -564,8 +568,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:202:6: ( 'if' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:202:8: 'if'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:6: ( 'if' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:202:8: 'if'
             {
             match("if"); 
 
@@ -587,8 +591,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:203:6: ( 'then' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:203:8: 'then'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:203:6: ( 'then' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:203:8: 'then'
             {
             match("then"); 
 
@@ -610,8 +614,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:204:6: ( 'else' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:204:8: 'else'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:204:6: ( 'else' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:204:8: 'else'
             {
             match("else"); 
 
@@ -633,8 +637,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:205:7: ( 'endif' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:205:9: 'endif'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:205:7: ( 'endif' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:205:9: 'endif'
             {
             match("endif"); 
 
@@ -656,8 +660,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:206:7: ( 'while' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:206:9: 'while'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:206:7: ( 'while' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:206:9: 'while'
             {
             match("while"); 
 
@@ -679,10 +683,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = DURATION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:9: ( ( 'rodona' | 'negra' | 'blanca' | 'corxera' | 'semicorxera' ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:11: ( 'rodona' | 'negra' | 'blanca' | 'corxera' | 'semicorxera' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:9: ( ( 'rodona' | 'negra' | 'blanca' | 'corxera' | 'semicorxera' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:11: ( 'rodona' | 'negra' | 'blanca' | 'corxera' | 'semicorxera' )
             {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:11: ( 'rodona' | 'negra' | 'blanca' | 'corxera' | 'semicorxera' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:11: ( 'rodona' | 'negra' | 'blanca' | 'corxera' | 'semicorxera' )
             int alt1=5;
             switch ( input.LA(1) ) {
             case 'r':
@@ -720,7 +724,7 @@ public class AslLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:12: 'rodona'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:12: 'rodona'
                     {
                     match("rodona"); 
 
@@ -729,7 +733,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:22: 'negra'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:22: 'negra'
                     {
                     match("negra"); 
 
@@ -738,7 +742,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:31: 'blanca'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:31: 'blanca'
                     {
                     match("blanca"); 
 
@@ -747,7 +751,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:41: 'corxera'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:41: 'corxera'
                     {
                     match("corxera"); 
 
@@ -756,7 +760,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:207:53: 'semicorxera'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:207:53: 'semicorxera'
                     {
                     match("semicorxera"); 
 
@@ -784,8 +788,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:208:8: ( 'do' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:208:10: 'do'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:208:8: ( 'do' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:208:10: 'do'
             {
             match("do"); 
 
@@ -807,8 +811,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:209:9: ( 'endwhile' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:209:11: 'endwhile'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:209:9: ( 'endwhile' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:209:11: 'endwhile'
             {
             match("endwhile"); 
 
@@ -830,8 +834,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:210:6: ( 'func' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:210:8: 'func'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:210:6: ( 'func' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:210:8: 'func'
             {
             match("func"); 
 
@@ -853,8 +857,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:211:9: ( 'endfunc' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:211:11: 'endfunc'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:211:9: ( 'endfunc' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:211:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -876,8 +880,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:212:8: ( 'return' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:212:10: 'return'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:212:8: ( 'return' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:212:10: 'return'
             {
             match("return"); 
 
@@ -899,8 +903,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:213:6: ( 'read' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:213:8: 'read'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:213:6: ( 'read' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:213:8: 'read'
             {
             match("read"); 
 
@@ -922,8 +926,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:214:7: ( 'write' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:214:9: 'write'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:214:7: ( 'write' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:214:9: 'write'
             {
             match("write"); 
 
@@ -945,8 +949,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:215:9: ( 'true' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:215:11: 'true'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:215:9: ( 'true' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:215:11: 'true'
             {
             match("true"); 
 
@@ -968,8 +972,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:216:9: ( 'false' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:216:11: 'false'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:216:9: ( 'false' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:216:11: 'false'
             {
             match("false"); 
 
@@ -991,12 +995,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:9: ( 'n' ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:11: 'n' ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:9: ( 'n' ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:11: 'n' ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' )
             {
             match('n'); 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:15: ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:15: ( 'do' | 're' | 'mi' | 'fa' | 'sol' | 'la' | 'si' )
             int alt2=7;
             switch ( input.LA(1) ) {
             case 'd':
@@ -1053,7 +1057,7 @@ public class AslLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:16: 'do'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:16: 'do'
                     {
                     match("do"); 
 
@@ -1062,7 +1066,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:21: 're'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:21: 're'
                     {
                     match("re"); 
 
@@ -1071,7 +1075,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:26: 'mi'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:26: 'mi'
                     {
                     match("mi"); 
 
@@ -1080,7 +1084,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:31: 'fa'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:31: 'fa'
                     {
                     match("fa"); 
 
@@ -1089,7 +1093,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:36: 'sol'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:36: 'sol'
                     {
                     match("sol"); 
 
@@ -1098,7 +1102,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:42: 'la'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:42: 'la'
                     {
                     match("la"); 
 
@@ -1107,7 +1111,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:217:47: 'si'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:217:47: 'si'
                     {
                     match("si"); 
 
@@ -1135,8 +1139,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLAY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:218:6: ( 'play' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:218:8: 'play'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:218:6: ( 'play' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:218:8: 'play'
             {
             match("play"); 
 
@@ -1158,8 +1162,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMPAS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:219:8: ( 'compas' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:219:10: 'compas'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:219:8: ( 'compas' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:219:10: 'compas'
             {
             match("compas"); 
 
@@ -1181,8 +1185,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:220:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:220:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:220:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:220:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1194,7 +1198,7 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:220:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:220:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop3:
             do {
                 int alt3=2;
@@ -1207,7 +1211,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1244,10 +1248,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:222:6: ( ( '0' .. '9' )+ )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:222:8: ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:222:6: ( ( '0' .. '9' )+ )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:222:8: ( '0' .. '9' )+
             {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:222:8: ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:222:8: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -1261,7 +1265,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1302,10 +1306,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:223:8: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:223:10: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:223:8: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:223:10: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
             {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:223:10: ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:223:10: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -1319,7 +1323,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1346,7 +1350,7 @@ public class AslLexer extends Lexer {
 
             match('.'); 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:223:24: ( '0' .. '9' )+
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:223:24: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -1360,7 +1364,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1401,7 +1405,7 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:226:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:226:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1431,13 +1435,13 @@ public class AslLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:226:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:226:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:226:16: (~ ( '\\n' | '\\r' ) )*
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:226:16: (~ ( '\\n' | '\\r' ) )*
                     loop7:
                     do {
                         int alt7=2;
@@ -1450,7 +1454,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:
+                    	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:
                     	    {
                     	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
                     	        input.consume();
@@ -1471,7 +1475,7 @@ public class AslLexer extends Lexer {
                     } while (true);
 
 
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:226:30: ( '\\r' )?
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:226:30: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1480,7 +1484,7 @@ public class AslLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:226:30: '\\r'
+                            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:226:30: '\\r'
                             {
                             match('\r'); 
 
@@ -1497,13 +1501,13 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:227:8: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:227:8: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:227:13: ( options {greedy=false; } : . )*
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:227:13: ( options {greedy=false; } : . )*
                     loop9:
                     do {
                         int alt9=2;
@@ -1528,7 +1532,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:227:41: .
+                    	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:227:41: .
                     	    {
                     	    matchAny(); 
 
@@ -1565,12 +1569,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:231:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:231:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:231:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:231:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:231:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:231:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop11:
             do {
                 int alt11=3;
@@ -1586,7 +1590,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:231:18: ESC_SEQ
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:231:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -1594,7 +1598,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:231:28: ~ ( '\\\\' | '\"' )
+            	    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:231:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -1631,8 +1635,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:237:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:237:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:237:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:237:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -1661,8 +1665,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:240:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:240:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:240:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:240:8: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1688,12 +1692,12 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:8: ( T__57 | T__58 | T__59 | T__60 | T__61 | EQUAL | NOT_EQUAL | OPENC | CLOSEC | DP | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DURATION | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | PLAY | COMPAS | ID | INT | DOUBLE | COMMENT | STRING | WS )
+        // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:8: ( T__57 | T__58 | T__59 | T__60 | T__61 | EQUAL | NOT_EQUAL | OPENC | CLOSEC | DP | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DURATION | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | NOTE | PLAY | COMPAS | ID | INT | DOUBLE | COMMENT | STRING | WS )
         int alt12=46;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:10: T__57
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:10: T__57
                 {
                 mT__57(); 
 
@@ -1701,7 +1705,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:16: T__58
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:16: T__58
                 {
                 mT__58(); 
 
@@ -1709,7 +1713,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:22: T__59
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:22: T__59
                 {
                 mT__59(); 
 
@@ -1717,7 +1721,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:28: T__60
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:28: T__60
                 {
                 mT__60(); 
 
@@ -1725,7 +1729,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:34: T__61
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:34: T__61
                 {
                 mT__61(); 
 
@@ -1733,7 +1737,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:40: EQUAL
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:40: EQUAL
                 {
                 mEQUAL(); 
 
@@ -1741,7 +1745,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:46: NOT_EQUAL
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:46: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
@@ -1749,7 +1753,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:56: OPENC
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:56: OPENC
                 {
                 mOPENC(); 
 
@@ -1757,7 +1761,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:62: CLOSEC
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:62: CLOSEC
                 {
                 mCLOSEC(); 
 
@@ -1765,7 +1769,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:69: DP
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:69: DP
                 {
                 mDP(); 
 
@@ -1773,7 +1777,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:72: LT
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:72: LT
                 {
                 mLT(); 
 
@@ -1781,7 +1785,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:75: LE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:75: LE
                 {
                 mLE(); 
 
@@ -1789,7 +1793,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:78: GT
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:78: GT
                 {
                 mGT(); 
 
@@ -1797,7 +1801,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:81: GE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:81: GE
                 {
                 mGE(); 
 
@@ -1805,7 +1809,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:84: PLUS
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:84: PLUS
                 {
                 mPLUS(); 
 
@@ -1813,7 +1817,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:89: MINUS
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:89: MINUS
                 {
                 mMINUS(); 
 
@@ -1821,7 +1825,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:95: MUL
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:95: MUL
                 {
                 mMUL(); 
 
@@ -1829,7 +1833,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:99: DIV
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:99: DIV
                 {
                 mDIV(); 
 
@@ -1837,7 +1841,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:103: MOD
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:103: MOD
                 {
                 mMOD(); 
 
@@ -1845,7 +1849,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:107: NOT
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:107: NOT
                 {
                 mNOT(); 
 
@@ -1853,7 +1857,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:111: AND
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:111: AND
                 {
                 mAND(); 
 
@@ -1861,7 +1865,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:115: OR
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:115: OR
                 {
                 mOR(); 
 
@@ -1869,7 +1873,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:118: IF
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:118: IF
                 {
                 mIF(); 
 
@@ -1877,7 +1881,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:121: THEN
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:121: THEN
                 {
                 mTHEN(); 
 
@@ -1885,7 +1889,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:126: ELSE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:126: ELSE
                 {
                 mELSE(); 
 
@@ -1893,7 +1897,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:131: ENDIF
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:131: ENDIF
                 {
                 mENDIF(); 
 
@@ -1901,7 +1905,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:137: WHILE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:137: WHILE
                 {
                 mWHILE(); 
 
@@ -1909,7 +1913,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:143: DURATION
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:143: DURATION
                 {
                 mDURATION(); 
 
@@ -1917,7 +1921,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:152: DO
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:152: DO
                 {
                 mDO(); 
 
@@ -1925,7 +1929,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:155: ENDWHILE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:155: ENDWHILE
                 {
                 mENDWHILE(); 
 
@@ -1933,7 +1937,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:164: FUNC
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:164: FUNC
                 {
                 mFUNC(); 
 
@@ -1941,7 +1945,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:169: ENDFUNC
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:169: ENDFUNC
                 {
                 mENDFUNC(); 
 
@@ -1949,7 +1953,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:177: RETURN
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:177: RETURN
                 {
                 mRETURN(); 
 
@@ -1957,7 +1961,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:184: READ
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:184: READ
                 {
                 mREAD(); 
 
@@ -1965,7 +1969,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:189: WRITE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:189: WRITE
                 {
                 mWRITE(); 
 
@@ -1973,7 +1977,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:195: TRUE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:195: TRUE
                 {
                 mTRUE(); 
 
@@ -1981,7 +1985,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:200: FALSE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:200: FALSE
                 {
                 mFALSE(); 
 
@@ -1989,7 +1993,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 38 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:206: NOTE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:206: NOTE
                 {
                 mNOTE(); 
 
@@ -1997,7 +2001,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:211: PLAY
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:211: PLAY
                 {
                 mPLAY(); 
 
@@ -2005,7 +2009,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 40 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:216: COMPAS
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:216: COMPAS
                 {
                 mCOMPAS(); 
 
@@ -2013,7 +2017,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 41 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:223: ID
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:223: ID
                 {
                 mID(); 
 
@@ -2021,7 +2025,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 42 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:226: INT
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:226: INT
                 {
                 mINT(); 
 
@@ -2029,7 +2033,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 43 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:230: DOUBLE
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:230: DOUBLE
                 {
                 mDOUBLE(); 
 
@@ -2037,7 +2041,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 44 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:237: COMMENT
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:237: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -2045,7 +2049,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 45 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:245: STRING
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:245: STRING
                 {
                 mSTRING(); 
 
@@ -2053,7 +2057,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 46 :
-                // /home/albert-ubuntu/Universidad/Actual/CL/CL-MusicInterpreter/src/parser/Asl.g:1:252: WS
+                // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:1:252: WS
                 {
                 mWS(); 
 
