@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 09:06:54
+// $ANTLR 3.4 /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g 2016-05-23 10:01:18
 
 package parser;
 import interp.AslTree;
@@ -3570,7 +3570,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "play"
-    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:1: play : PLAY ^ note DURATION ;
+    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:1: play : PLAY ^ ( note DURATION | ID ) ;
     public final AslParser.play_return play() throws RecognitionException {
         AslParser.play_return retval = new AslParser.play_return();
         retval.start = input.LT(1);
@@ -3580,15 +3580,17 @@ public TreeAdaptor getTreeAdaptor() {
 
         Token PLAY114=null;
         Token DURATION116=null;
+        Token ID117=null;
         AslParser.note_return note115 =null;
 
 
         AslTree PLAY114_tree=null;
         AslTree DURATION116_tree=null;
+        AslTree ID117_tree=null;
 
         try {
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:6: ( PLAY ^ note DURATION )
-            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:8: PLAY ^ note DURATION
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:6: ( PLAY ^ ( note DURATION | ID ) )
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:8: PLAY ^ ( note DURATION | ID )
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3600,18 +3602,57 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(PLAY114_tree, root_0);
 
 
-            pushFollow(FOLLOW_note_in_play1394);
-            note115=note();
+            // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:14: ( note DURATION | ID )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA25_0==NOTE) ) {
+                alt25=1;
+            }
+            else if ( (LA25_0==ID) ) {
+                alt25=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 25, 0, input);
 
-            adaptor.addChild(root_0, note115.getTree());
+                throw nvae;
 
-            DURATION116=(Token)match(input,DURATION,FOLLOW_DURATION_in_play1396); 
-            DURATION116_tree = 
-            (AslTree)adaptor.create(DURATION116)
-            ;
-            adaptor.addChild(root_0, DURATION116_tree);
+            }
+            switch (alt25) {
+                case 1 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:15: note DURATION
+                    {
+                    pushFollow(FOLLOW_note_in_play1395);
+                    note115=note();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, note115.getTree());
+
+                    DURATION116=(Token)match(input,DURATION,FOLLOW_DURATION_in_play1397); 
+                    DURATION116_tree = 
+                    (AslTree)adaptor.create(DURATION116)
+                    ;
+                    adaptor.addChild(root_0, DURATION116_tree);
+
+
+                    }
+                    break;
+                case 2 :
+                    // /Users/cristianpinto/iCloud/CL/CL-MusicInterpreter/src/parser/Asl.g:181:31: ID
+                    {
+                    ID117=(Token)match(input,ID,FOLLOW_ID_in_play1401); 
+                    ID117_tree = 
+                    (AslTree)adaptor.create(ID117)
+                    ;
+                    adaptor.addChild(root_0, ID117_tree);
+
+
+                    }
+                    break;
+
+            }
 
 
             }
@@ -3762,8 +3803,9 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_expr_in_expr_list1359 = new BitSet(new long[]{0x1000000000000002L});
     public static final BitSet FOLLOW_NOTE_in_note1377 = new BitSet(new long[]{0x0000000080000002L});
     public static final BitSet FOLLOW_INT_in_note1381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PLAY_in_play1391 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_note_in_play1394 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_DURATION_in_play1396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PLAY_in_play1391 = new BitSet(new long[]{0x0000010020000000L});
+    public static final BitSet FOLLOW_note_in_play1395 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_DURATION_in_play1397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_play1401 = new BitSet(new long[]{0x0000000000000002L});
 
 }

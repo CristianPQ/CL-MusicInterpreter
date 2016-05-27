@@ -178,7 +178,7 @@ expr_list:  expr (','! expr)*
         ;
 note : NOTE^ (INT)?;
 
-play	:	PLAY^ note DURATION
+play	:	PLAY^ (note DURATION | ID)
 	;
 
 // Basic tokens

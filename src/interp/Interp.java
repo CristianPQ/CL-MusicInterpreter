@@ -242,40 +242,52 @@ public class Interp {
         // A big switch for all type of instructions
         switch (t.getType()) {
             case AslLexer.PLAY:
-                //System.out.println("IN PLAY");
+                System.out.println("IN PLAY");
 
-                Data noteData = evaluateExpression(t.getChild(0));
-				
-                Data auxDo = new Data(Stack.getVariable("do"));
+                if (t.getChildCount() == 2) {
+                    System.out.println("note + duration");
 
-                double auxNoteData = auxDo.getDoubleValue() + noteData.getDoubleValue();
+                    Data noteData = evaluateExpression(t.getChild(0));
+                
+                    Data auxDo = new Data(Stack.getVariable("do"));
 
-                noteData.setValue(auxNoteData);
+                    double auxNoteData = auxDo.getDoubleValue() + noteData.getDoubleValue();
 
-                //System.out.println("before duration");
-                Data durationData = evaluateExpression(t.getChild(1));
-				System.out.println(durationData.getDoubleValue());
+                    noteData.setValue(auxNoteData);
 
-                System.out.println("    NOTE");
-                System.out.println("    " + noteData.toString());
-                System.out.println("    DURATION");
-                System.out.println("    " + durationData.toString());
-                try {
-                    Synthesizer synth = MidiSystem.getSynthesizer();
-                    synth.open();
-                    MidiChannel[] channels = synth.getChannels();
+                    //System.out.println("before duration");
+                    Data durationData = evaluateExpression(t.getChild(1));
+                    System.out.println(durationData.getDoubleValue());
 
-                    channels[channel].noteOn( 60 + ((int)(noteData.getDoubleValue() * 2)), volume ); // C note
-                    Thread.sleep( (int)(duration *(durationData.getDoubleValue())));
+                    System.out.println("    NOTE");
+                    System.out.println("    " + noteData.toString());
+                    System.out.println("    DURATION");
+                    System.out.println("    " + durationData.toString());
+                    try {
+                        Synthesizer synth = MidiSystem.getSynthesizer();
+                        synth.open();
+                        MidiChannel[] channels = synth.getChannels();
+
+                        channels[channel].noteOn( 60 + ((int)(noteData.getDoubleValue() * 2)), volume ); // C note
+                        Thread.sleep( (int)(duration *(durationData.getDoubleValue())));
 
 
 
-                    synth.close();
+                        synth.close();
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    return null;
+                    
+                } else if (t.getChildCount() == 1) {
+                    System.out.println("COMPAS");
+                    value = evaluateExpression(t.getChild(0));
+                    System.out.println("COMPAS text: " + value.toString());
+                    return null;
                 }
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
-                return null;
+
+                
 			
 			case AslLexer.COMPAS:
                 //System.out.print("in compas childs: ");

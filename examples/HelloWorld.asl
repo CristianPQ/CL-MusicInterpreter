@@ -1,5 +1,5 @@
 func main()
-  ndo 1 = 0;
+  ndo 0 = 0;
   negra = 1;
   play ndo negra;
   play nre negra;
