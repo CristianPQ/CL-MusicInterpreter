@@ -242,7 +242,7 @@ public class Interp {
         // A big switch for all type of instructions
         switch (t.getType()) {
             case AslLexer.PLAY:
-                System.out.println("IN PLAY");
+                //System.out.println("IN PLAY");
 
                 if (t.getChildCount() == 2) {
                     System.out.println("note + duration");
@@ -257,7 +257,7 @@ public class Interp {
 
                     //System.out.println("before duration");
                     Data durationData = evaluateExpression(t.getChild(1));
-                    System.out.println(durationData.getDoubleValue());
+                    //System.out.println(durationData.getDoubleValue());
 
                     System.out.println("    NOTE");
                     System.out.println("    " + noteData.toString());
@@ -281,9 +281,47 @@ public class Interp {
                     return null;
                     
                 } else if (t.getChildCount() == 1) {
-                    System.out.println("COMPAS");
+                    //System.out.println("COMPAS");
                     value = evaluateExpression(t.getChild(0));
-                    System.out.println("COMPAS text: " + value.toString());
+
+                    String[] compasArray = value.toString().split(",");
+
+                    try {
+                        Synthesizer synth = MidiSystem.getSynthesizer();
+                        synth.open();
+                        MidiChannel[] channels = synth.getChannels();
+
+
+                        for (int i = 0; i < compasArray.length; i=i+2) {
+                            int j = i+1;
+                            //System.out.println(compasArray[i]);
+                            //System.out.println(compasArray[j]);
+                            double auxDouble = getNoteValue(compasArray[i]);
+
+                            Data durationData = new Data(Stack.getVariable(compasArray[j]));
+                            
+                            System.out.println("note + duration");
+                            System.out.println("    NOTE");
+                            System.out.print("    ");
+                            System.out.println(auxDouble);
+                            System.out.println("    DURATION");
+                            System.out.println("    " + durationData.toString());
+
+                            //System.out.print("Note value: ");
+                            //System.out.println(auxDouble);
+
+                            channels[channel].noteOn( 60 + ((int)(auxDouble * 2)), volume ); // C note
+                            Thread.sleep( (int)(duration *(durationData.getDoubleValue())));
+                        }
+
+                        synth.close();
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    
+
                     return null;
                 }
 
@@ -808,5 +846,62 @@ public class Interp {
         
         trace.println(" <line " + lineNumber() + ">");
         if (function_nesting < 0) trace.close();
+    }
+
+
+
+    private double getNoteValue(String strToParse) {
+
+        //System.out.println("In getNoteValue");
+        //System.out.println(strToParse);
+        double aux = 0;
+
+        char auxNum = strToParse.charAt(strToParse.length()-1);
+
+        if (Character.isDigit(auxNum)) {
+            aux = (double) Character.digit(auxNum, 10);
+            strToParse = strToParse.substring(0, strToParse.length()-1);
+        }
+        String auxStr2 = strToParse.substring(1);
+
+        //System.out.println(auxStr2);
+
+        //System.out.println(auxStr2);
+        //System.out.println("child 1 ");
+        double auxFinalValue = 0;
+        //System.out.println(value.getDoubleValue());
+
+        switch(auxStr2) {
+            case "re":
+                auxFinalValue = auxFinalValue +1;
+                break;
+            case "mi":
+                auxFinalValue = auxFinalValue +2;
+                break;
+            case "fa":
+                auxFinalValue = auxFinalValue +2.5;
+                break;
+            case "sol":
+                auxFinalValue = auxFinalValue +3.5;
+                break;
+            case "la":
+                auxFinalValue = auxFinalValue +4.5;
+                break;
+            case "si":
+                auxFinalValue = auxFinalValue +5.5;
+                break;
+            default:
+                break;
+        }
+
+        
+        auxFinalValue = auxFinalValue + (6*aux);
+
+        Data auxDo = new Data(Stack.getVariable("do"));
+
+        if (auxDo.isDouble()) {
+            auxFinalValue += auxDo.getDoubleValue();
+        }
+        return auxFinalValue;
     }
 }
