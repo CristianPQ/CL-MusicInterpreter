@@ -1,9 +1,8 @@
 func main()
 	ndo = 0;
-	negra = 1;
+	negra = 2.3;
 	
-	compas got 3:1:4 [nla , corxera : ndo , corxera : nre,  negra  : nre,  negra   : nre,  semicorxera   : nre,  semicorxera   : nre,  corxera ];
-	/*compas got 5:1:4 [nla , corxera : ndo , negra : nre,  negra  : nre,  blanca];*/
-
-
+	compas got 2:4 [ndo 1, negra : ndo 2, negra | ndo, negra : ndo,negra | ndo, negra : ndo,negra  ];
+	
+	write got;
 endfunc

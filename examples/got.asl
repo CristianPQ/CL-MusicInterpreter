@@ -11,7 +11,6 @@ func main()
 
   i = i + 2;
   
-
   play nla blanca;
   play nre negra;
   play nfa corxera;

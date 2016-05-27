@@ -38,7 +38,8 @@ tokens {
     LIST_FUNCTIONS; // List of functions (the root of the tree)
     ASSIGN;     // Assignment instruction
     ASSIGNNOTE;     // Assignment instruction
-    ASSIGNDURATION;
+    ASSIGNDURATION;	//Assignment of duration
+    MINICOMPAS; 
     PARAMS;     // List of parameters in the declaration of a function
     FUNCALL;    // Function call
     ARGLIST;    // List of arguments passed in a function call
@@ -114,7 +115,13 @@ assignnote  :   note eq=EQUAL expr -> ^(ASSIGNNOTE[$eq,":="] note expr)
 assignduration: DURATION eq=EQUAL expr -> ^(ASSIGNDURATION[$eq,":="] DURATION expr)
 	;
 	
-assigncompas: COMPAS^ ID expr DP! expr DP! expr OPENC! (NOTE ','! DURATION DP!)* (NOTE ','! DURATION) CLOSEC!
+assigncompas: COMPAS^ ID expr DP! expr OPENC! minicompas ('|'! minicompas)* CLOSEC!
+	;
+	
+minicompas: exprmus -> ^(MINICOMPAS exprmus)
+	;
+	
+exprmus: (note ','! DURATION) (DP! note ','! DURATION)*
 	;
 
 // if-then-else (else is optional)
@@ -177,6 +184,7 @@ funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
 expr_list:  expr (','! expr)*
         ;
 note : NOTE^ (INT)?;
+
 
 play	:	PLAY^ (note DURATION | ID)
 	;
