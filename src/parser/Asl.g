@@ -37,7 +37,7 @@ options {
 tokens {
     LIST_FUNCTIONS; // List of functions (the root of the tree)
     ASSIGN;     // Assignment instruction
-    ASSIGNNOTE;     // Assignment instruction
+    ASSIGNNOTE;     // Assignment of note
     ASSIGNDURATION;	//Assignment of duration
     MINICOMPAS; 
     PARAMS;     // List of parameters in the declaration of a function
