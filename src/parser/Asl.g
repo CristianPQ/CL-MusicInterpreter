@@ -183,7 +183,7 @@ funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
 // A list of expressions separated by commas
 expr_list:  expr (','! expr)*
         ;
-note : NOTE^ (factor)?;
+note : NOTE^ (num_expr)?;
 
 
 play	:	PLAY^ (note DURATION | ID)
