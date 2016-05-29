@@ -299,7 +299,7 @@ public class Interp {
                             double auxDouble = getNoteValue(compasArray[i]);
 
                             Data durationData = new Data(Stack.getVariable(compasArray[j]));
-                            
+
                             System.out.println("note + duration");
                             System.out.println("    NOTE");
                             System.out.print("    ");
@@ -357,17 +357,24 @@ public class Interp {
 				return null;
 			
             case AslLexer.ASSIGNNOTE:
+                //System.out.println("ASSIGNNOTE");
+
 
                 Data aux = evaluateExpression(t.getChild(0));
 
+                
+                //System.out.println(aux.toString());
+
                 value = evaluateExpression(t.getChild(1));
+
+                
                 
                 if (value.isInteger()) {
                     double auxVal = (double) value.getIntegerValue();
                     value.setValue(auxVal);
                 }
 
-                double auxFinalValue = value.getDoubleValue();
+                double auxFinalValue = value.getDoubleValue() - aux.getDoubleValue();
                 
 
                 value.setValue(auxFinalValue);
@@ -516,7 +523,18 @@ public class Interp {
 
                     //System.out.println("child child value");
                     //System.out.println(t.getChild(0).getChild(0).getText());
-                    aux = Double.parseDouble(t.getChild(0).getText());
+
+                    Data dataAux = evaluateExpression(t.getChild(0));
+
+                    if (dataAux.isInteger()) {
+                        double auxAux = (double) dataAux.getIntegerValue();
+                        dataAux.setValue(auxAux);
+                        
+                    }
+
+                    aux = dataAux.getDoubleValue();
+                    //System.out.print("aux value: ");
+                    //System.out.println(aux);
                 }
 
                 String auxStr = t.getText();
@@ -861,6 +879,11 @@ public class Interp {
         if (Character.isDigit(auxNum)) {
             aux = (double) Character.digit(auxNum, 10);
             strToParse = strToParse.substring(0, strToParse.length()-1);
+
+            char auxSig = strToParse.charAt(strToParse.length()-1);
+            if (auxSig == '-') {
+                aux *= -1.0;
+            }
         }
         String auxStr2 = strToParse.substring(1);
 
