@@ -495,7 +495,7 @@ public class Interp {
                 }
 
                 // Write an expression
-                System.out.print(evaluateExpression(v).toString());
+                System.out.println(evaluateExpression(v).toString());
                 return null;
 
             // Function call
