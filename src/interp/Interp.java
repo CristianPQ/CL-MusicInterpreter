@@ -473,9 +473,24 @@ public class Interp {
             // Write statement: it can write an expression or a string.
             case AslLexer.WRITE:
                 AslTree v = t.getChild(0);
+                //System.out.println("IN WRITE");
                 // Special case for strings
                 if (v.getType() == AslLexer.STRING) {
                     System.out.format(v.getStringValue());
+                    return null;
+                }
+                if (v.getType() == AslLexer.NOTE) {
+                    //System.out.println("IN WRITE NOTE");
+
+                    Data auxAux = evaluateExpression(v);
+
+                    Data preAuxDo = new Data(Stack.getVariable("do"));
+
+                    Double auxDo = preAuxDo.getDoubleValue();
+
+                    auxAux.setValue(auxAux.getDoubleValue() + auxDo);
+
+                    System.out.println(auxAux.toString());
                     return null;
                 }
 
