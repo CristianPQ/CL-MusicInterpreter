@@ -1,4 +1,3 @@
-
 func main()
   var = 3;
   var2 = 4;
