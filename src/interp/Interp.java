@@ -341,6 +341,7 @@ public class Interp {
 				if(den == 8) tempNote = "corxera";
 				if(den == 16) tempNote = "semicorxera";
 
+				
 				double compasValue = (Stack.getVariable(tempNote)).getDoubleValue();
 				compasValue *= num;
 				boolean first = true;
@@ -769,7 +770,7 @@ public class Interp {
 			String note = (t.getChild(i)).getText();
 			acum += (Stack.getVariable(note)).getDoubleValue();
 			if(acum > numComp)  throw new RuntimeException ("Compas is not correct composed");
-			else if (acum == numComp) wrong = false;
+			else if (numComp - acum < 0.00001) wrong = false; //Java no multiplica be Ex: 2.2 * 3 = 6.60000005
 			else wrong = true;
 		}		
 		if(wrong) throw new RuntimeException ("Compas is not correct composed");
